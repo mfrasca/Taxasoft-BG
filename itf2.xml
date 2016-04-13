@@ -1,0 +1,149 @@
+      <accsta code="C" name="Current accession in the living collection"/>
+      <accsta code="D" name="Non-current accession of the living collection due to death"/>
+      <accsta code="T" name="Non-current accession due to transfer to another record system, normally of another garden"/>
+      <accsta code="S" name="Stored in a dormant state"/>
+      <accsta code="O" name="Other' accession status  - different from those above."/>
+
+      <acct code="P" name="Whole plant"/>
+      <acct code="S" name="Seed or Spore"/>
+      <acct code="V" name="Vegetative part"/>
+      <acct code="T" name="Tissue culture"/>
+      <acct code="O" name="Other"/>
+
+      <bre code="M" name="Male"/>
+      <bre code="F" name="Female"/>
+      <bre code="B" name="includes both 'male' and 'female' individuals"/>
+      <bre code="Q" name="Dioecious plant of unknown sex"/>
+      <bre code="H" name="hermaphrodite or is monoecious"/>
+      <bre code="H1" name="hermaphrodite or is monoecious, but self-incompatible."/>
+      <bre code="A" name="reproduces by agamospermy"/>
+      <bre code="U" name="Insufficient information to dedescriptionine breeding system."/>
+
+      <dont code="E" name="Expedition"/>
+      <dont code="G" name="Gene bank"/>
+      <dont code="B" name="Botanic Garden or Arboretum"/>
+      <dont code="R" name="Other research, field or experimental station"/>
+      <dont code="S" name="Staff of the botanic garden to which record system applies"/>
+      <dont code="U" name="University Department"/>
+      <dont code="H" name="Horticultural Association or Garden Club"/>
+      <dont code="M" name="Municipal department"/>
+      <dont code="N" name="Nursery or other commercial establishment"/>
+      <dont code="I" name="Individual"/>
+      <dont code="O" name="Other"/>
+      <dont code="U" name="Unknown"/>
+
+      <hybrid code="H" name="A hybrid formula"/>
+      <hybrid code="x" name="A hybrid"/>
+      <hybrid code="+" name="A graft hybrid or graft chimaera"/>
+
+      <idql code="aff." name="Akin to or bordering"/>
+      <idql code="cf." name="Compare with"/>
+      <idql code="Incorrect" name="Incorrect"/>
+      <idql code="forsan" name="Perhaps"/>
+      <idql code="near" name="Close to"/>
+      <idql code="?" name="Questionable"/>
+
+      <per code="M"  name="Monocarpic plants"/>
+      <per code="MA" name="Annuals"/>
+      <per code="MB" name="Biennials and short-lived perennials"/>
+      <per code="ML" name="Long-lived monocarpic plants"/>
+      <per code="P"  name="Polycarpic plants"/>
+      <per code="PD" name="Deciduous polycarpic plants"/>
+      <per code="PE" name="Evergreen polycarpic plants"/>
+      <per code="U"  name="Uncertain which of the above applies."/>
+
+      <prohis code="I"  name="Individual wild plant(s)"/>
+      <prohis code="S"  name="Seeds from sexual reproduction (excluding apomixis)"/>
+      <prohis code="SA" name="Seeds from open breeding"/>
+      <prohis code="SB" name="Seeds from controlled breeding"/>
+      <prohis code="SC" name="Seeds from self-pollinated isolated plants"/>
+      <prohis code="V"  name="Plant material derived asexually"/>
+      <prohis code="VA" name="Vegetative reproduction"/>
+      <prohis code="VB" name="Vegetative from apomictic cloning (agamospermy)"/>
+      <prohis code="U"  name="Uncertain, or no information."/>
+
+      <prot code="W" name="Accession of wild source"/>
+      <prot code="Z" name="From a wild source plant in cultivation"/>
+      <prot code="G" name="Not of wild source"/>
+      <prot code="U" name="Unknown"/>
+
+      <rank seq="1" m_code="regnum" name="Regnum"/>
+      <rank seq="2" m_code="subregnum" name="Subregnum"/>
+      <rank seq="3" m_code="division" name="Division"/>
+      <rank seq="4" m_code="subdivision" name="Subdivision"/>
+      <rank seq="5" m_code="class" name="Class"/>
+      <rank seq="6" m_code="subclass" name="Subclass"/>
+      <rank seq="7" m_code="order" name="Order"/>
+      <rank seq="8" m_code="family" name="Family"/>
+      <rank seq="9" m_code="subfamily" name="Subfamily"/>
+      <rank seq="10" m_code="tribe" name="Tribe"/>
+      <rank seq="11" m_code="subtribe" name="Subtribe"/>
+      <rank seq="12" m_code="genus" name="Genus"/>
+      <rank seq="13" m_code="subgenus" name="Subgenus"/>
+      <rank seq="14" m_code="section" name="Section"/>
+      <rank seq="15" m_code="subsect." name="Subsection"/>
+      <rank seq="16" m_code="series" name="Series"/>
+      <rank seq="17" m_code="subser." name="Subseries"/>
+      <rank seq="18" m_code="species" name="Species"/>
+      <rank seq="19" m_code="nss" name="Nothosubspecies"/>
+      <rank seq="20" m_code="subsp." name="Subspecies"/>
+      <rank seq="21" m_code="convar." name="Convariety"/>
+      <rank seq="22" m_code="var." name="Variety"/>
+      <rank seq="23" m_code="nva" name="Nothovariety"/>
+      <rank seq="24" m_code="subvar." name="Subvariety"/>
+      <rank seq="25" m_code="f." name="Form"/>
+      <rank seq="26" m_code="subf." name="Subform"/>
+      <rank seq="27" m_code="nfo" name="Nothoform"/>
+      <rank seq="28" m_code="sxss" name="Hybrid between subsp."/>
+      <rank seq="29" m_code="ssxva" name="Hybrid subsp. x var."/>
+      <rank seq="30" m_code="ssxfo" name="Hybrid subsp. x f."/>
+      <rank seq="31" m_code="vaxsf" name="Hybrid var. x subf."/>
+
+      <rkql code="B" name="Below Family"/>
+      <rkql code="F" name="Family"/>
+      <rkql code="G" name="Genus"/>
+      <rkql code="S" name="Species"/>
+      <rkql code="I" name="first Infraspecific Epithet"/>
+      <rkql code="J" name="second Infraspecific Epithet (new for ITF2)"/>
+      <rkql code="C" name="Cultivar"/>
+
+      <spql ode="agg."   name="An aggregate species"/>
+      <spql ode="s.lat." name="aggregrate species (sensu lato)"/>
+      <spql ode="s.str." name="segregate species (sensu stricto)"/>
+
+      <vlev code="U" name="unknown if the name has been checked"/>
+      <vlev code="0" name="not been dedescriptionined by any authority"/>
+      <vlev code="1" name="dedescriptionined by comparison with other named plants"/>
+      <vlev code="2" name="dedescriptionined by a taxonomist or other competent person"/>
+      <vlev code="3" name="dedescriptionined by a specialist (taxonomist)"/>
+      <vlev code="4" name="plant represents all or part of the type material (wrong position in ITF)"/>
+
+      <wpst code="Wild native"       name="Endemic found within its indigenous range"/>
+      <wpst code="Wild non-native"   name="Plant found outside its indigenous range"/>
+      <wpst code="Cultivated native" name="Endemic known to have been cultivated and reintroduced or translocated within its indigenous range."/>
+      <wpst code="Cultivated non-native" name="Plant known to be cultivated and found outside its indigenous range."/>
+
+      <use OID="1501" name="fruit trees and their wild relatives"/>
+      <use OID="1502" name="crop plants from several regions of the world, such as cereals"/>
+      <use OID="1503" name="species of value for amenity horticulture or as ornamentals"/>
+      <use OID="1504" name="textile plants"/>
+      <use OID="1505" name="oil plants"/>
+      <use OID="1506" name="timbers"/>
+      <use OID="1507" name="cork"/>
+      <use OID="1508" name="resin yielding plants"/>
+      <use OID="1509" name="plants used for industrial production"/>
+      <use OID="1510" name="grasses, and forage plants"/>
+      <use OID="1511" name="wild relatives of crops"/>
+      <use OID="1512" name="underutilized or neglected crops"/>
+      <use OID="1513" name="local and traditional economic plant varieties and land races"/>
+      <use OID="1514" name="medicinal plants"/>
+      <use OID="1515" name="plants that are important for local uses (e.g. for basket making, for tools used in cooking, fishing and agriculture)"/>
+      <use OID="1516" name="perfume, essential oil and cosmetic plants"/>
+      <use OID="1517" name="spice and flavouring plants"/>
+      <use OID="1518" name="melifluous species"/>
+      <use OID="1519" name="dyeing and tanning"/>
+      <use OID="1520" name="plants for bonsai"/>
+      <use OID="1521" name="systematic collections of important eceonomic plant groups such as conifers or legumes"/>
+      <use OID="1522" name="temperate and tropical timber trees"/>
+      <use OID="1523" name="ornamental trees"/>
+

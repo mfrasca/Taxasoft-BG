@@ -1,0 +1,388 @@
+<?xml version='1.0'?> 
+<database name='brom' nbrTables='7' listLines='20' maxFieldLen='135' language='EN' add='0'  edit='0'>
+	
+	<user name="Derek" />
+	<user name="Eric" />
+	<user name="Harry" />
+	<user name="Marian" />
+	<user name="Peter" />
+	
+	<libtype name='Book'/>
+	<libtype name='(Check)List'/>
+	<libtype name='Electronic'/>
+	<libtype name='Flora'/>
+	<libtype name='Article'/>
+	<libtype name='Dissertation'/>
+	<libtype name='Booklet'/>
+	<libtype name='Bulletin'/>
+	<libtype name='Separate Publ.'/>
+	
+	<addtype name='Comments'/>
+	<addtype name='Etymology'/>
+	<addtype name='Material'/>
+	<addtype name='Personal Communication'/>
+	<addtype name='Taxonomic Change'/>
+	
+	<descLabel name='Current opinion'/>
+	<descLabel name='Old opinion'/>
+	<descLabel name='Original description'/>
+	<descLabel name='-'/>
+
+	<material name='Clonotype'/>
+	<material name='Type'/>
+	<material name='Type ?'/>
+	<material name='Type Fragment'/>
+	<material name='Holotype'/>
+	<material name='Isotype'/>
+	<material name='Isolectotype'/>
+	<material name='Isoneotype'/>
+	<material name='Lectotype'/>
+	<material name='Paratype'/>
+	<material name='Photograph of type'/>
+	<material name='Photograph (no collection)'/>
+	<material name='Syntype'/>
+	<material name='Material studied'/>
+	<material name='Material identified'/>
+	<material name='Material published'/>
+	<material name='Material on the Web'/>
+	<material name='Material used for publ.'/>
+
+	<table name='taxon' description="Taxon Name"
+		nr='0' fieldNr='21' maxFieldHig='2' sortDefault="Genus, Species" reference="Genus, Species, iRank, InfraName" >
+				
+		<field name="id" len='6' list='1' />
+		<field name="autoIndex" len='50' />
+		<field name="TaxonNbr" len='20' list='1' ancor='1' combine='1'/>
+		<field name="synToNbr" len='20' list='1' type='reference' tableNr='0' reference='TaxonNbr'/>
+		<field name="Genus" len='20' list='1' ancor='1' index='1' combine='1' />
+		<field name="hyb" len='2' list='1' ancor='1' index='1'  combine='1'/>
+		<field name="Group" len='20' combine='1'/>
+		<field name="basFlag" len='10' />
+		<field name="Species" len='50' list='1' ancor='1' index='1' />
+		<field name="iRank" len='10' list='1' ancor='1' index='1'  combine='1'/>
+		<field name="InfraName" len='50' list='1' ancor='1' index='1' />
+		<field name="Author" len='50' maxLen='60' list='1'  />
+		<field name="literature_id" len='6' type='select' tableNr='5' explain='(Publication record)' />
+		<field name="Publication" type="text" list='20' hig='1' len='100' />
+		<field name="Collation" len='50' list='1'  combine='1'/>
+		<field name="Date" len='15' combine='1' />
+		<field name="Year" len='6'  maxLen='15'  list='5' />
+		<field name="PublNotes" type="text" hig='1'  len='100'/>
+		<field name="Distribution" type="text" hig='3'  len='100'/>
+		<field name="Altitude" len='20' />
+		<field name="Habitat" type="text" hig='1' len='100' />
+		<field name="Type" type="text" hig='2'  len='100'/>
+		<field name="status" len='100' />
+		<field name="Changed" len='50' />
+		<field name="access" len='6' noEdit='1' explain='(Encyclopaedia Online) ' combine='1' />
+		<field name="img" len='2' noEdit='1'/>
+		
+		<function 
+			name="WCSP - "
+			replace="Genus,Species"
+			url="http://apps.kew.org/wcsp/advsearch.do?genus=@Genus&amp;species=@Species&amp;page=x" />
+		<function 
+			name="Google - "
+			replace="Genus,Species"
+			url="http://images.google.nl/images?hl=nl&amp;lr=&amp;ie=UTF-8&amp;q=@Genus+@Species&amp;btnG=Zoeken'" />
+			
+		<function name="Citation - " replace="id" url="?dBase=BromEncEdit&amp;action=fullCitation&amp;id=@id" />
+		<function name="Synonyms" replace="TaxonNbr" url="?dBase=BromEncEdit&amp;find=@TaxonNbr" />
+		
+		<function name="stringReplace" location='list' url="?dBase=BromEncEdit&amp;action=strReplace&amp;table=taxon" />
+	</table>
+	
+	<fields_not_shown>
+		<field name="mother" len='6' combine='1' />
+		<field name="father" len='6' explain='(go to hybrids to see parents)' />
+	</fields_not_shown>
+	
+	<table 	nr='1' name='description' description="Description (Full Publication)"
+		fieldNr='25' maxFieldHig='20' sortDefault="id" reference="Genus, Species, iRank, InfraName" linkToTable='0'>
+		
+		<field name="id" len='6' list='1' ancor='1' />
+		<field name="taxon_id" len='6' combine='1' />
+		<field name="doc_id" tableNr='9' len='6' spaces='        ' combine='1' />
+		<field name="Filename" len='100' list='25' ancor='1' noEdit='1' />
+		<field name="Genus" len='10' maxLen='20' list='1' ancor='1' index='1' combine='1' />
+		<field name="Species" len='20' maxLen='50' list='1' ancor='1' index='1' combine='1'/>
+		<field name="irank" len='5' maxLen='10' list='1' ancor='1' index='1' combine='1' />
+		<field name="InfraName" len='20' maxLen='50' list='1' ancor='1' index='1' combine='1'/>
+		<field name="Author" len='25' maxLen='60' list='30' />
+		<field name="Publication" len='35' maxLen='50' list='0' hig='1' combine='1' />
+		<field name="Collation" len='20' maxLen='100' list='0'  combine='1' />
+		<field name="Year" len='5' maxLen='15'  list='0'/>
+		<field name="Source" len='40' maxLen='100' list='30'  combine='1'/>
+		<field name="literature_id" len='6' type='select' tableNr='5' list='1' explain='(publication record)'/>
+		<field name="Diagnose" type="text" hig='2' len='150'/>
+		<field name="Language" len='10'  list='1' />
+		<field name="Description" type="text" hig='9' len='150'/>
+		<field name="Etymology" type="text" hig='1' len='150'/>
+		<field name="Taxonomy" type="text" hig='2' len='150' />
+		<field name="Notes" type="text" hig='3' len='150'/>
+		<field name="Distribution" type="text" hig='1' len='150'/>
+		<field name="Habitat" combine='1' len='110' maxLen='500'/>
+		<field name="Altitude" len='20' />
+		<field name="Phenology" type="text" hig='1' len='150'/>
+		<field name="Type" type="text" hig='2' len='150'/>
+		<field name="Material" type="text" hig='2' len='150' />
+		<field name="Checked" len='1' list='1' choices='No,Yes' />
+		<field name="Changed" len='50' />
+		
+		<function 
+			name="descData2Taxon" 
+			replace="id"
+			url="?dBase=bromEncEdit&amp;action=descData2Taxon&amp;desc_id=@id&amp;insert" />
+		<function name="Formatted output- " replace="id" url="?dBase=BromEncEdit&amp;action=showDescription&amp;id=@id" />
+	</table>
+	
+
+	<table 	name='reference' description="Reference"
+		nr='2' fieldNr='7' maxFieldHig='30' sortDefault="publication" linkToTable='0'>	
+		
+		<field name="id" len='6' list='1' ancor='1'/>
+		<field name="taxon_id" len='6' type='select' tableNr='0' explain='(do not change)'/>
+		<field name="literature_id" len='6' type='select' tableNr='5' list='1' ancor='1' explain='(publication record)'/>
+		<field name="publication" len='50' list='1' ancor='1' explain='(if previous field not used)&amp;nbsp;'/>
+		<field name="collation" len='100' MaxLen='250' list='1' ancor='1' />
+		<field name="illustration" len='20' list='1' />
+		<field name="notes" type="text" hig='4' />
+	</table>
+
+	<table 	name='objects' description="Objects (link to images/files)"
+		nr='3' fieldNr='7' maxFieldHig='15' sortDefault='type' linkToTable='0'>	
+		
+		<load path='path' field='url' rowspan='7' width='250' />		
+		<field name="id" len='6' list='1'  />
+		<field name="taxon_id" len='6' list='1' ancor='1' />
+		<field name="type" len='20' list='1' ancor='1' />
+		<field name="use" len='10' list='1' ancor='1' />
+		<field name="owner" len='20' list='1'/>
+		<field name="origin" type="text" hig='6' />
+		<field name="note" type="text" hig='6' />
+		<field name="prov" len='10' />
+		<field name="verification" len='20' />
+		<field name="verifier" len='50' />
+		<field name="graphics" len='50' />
+		<field name="path" len='50' />
+		<field name="url" len='100' />
+		<field name="file" type="file" len='35' target='url' destination="../Encyclopedia/brome/images/" allow=".jpg,.doc,.pdf" />
+	</table>
+
+	<table 	name='additional' description="Additional information like Comment, Taxonomic Changes etc." 
+		nr='4' fieldNr='5' maxFieldHig='10' sortDefault='Changed' linkToTable='0'>	
+		
+		<field name="id" len='6'/>
+		<field name="taxon_id" len='6' list='1' ancor='1' combine='1' />
+		<field name="description_id" len='6' list='1' ancor='1' />
+		<field name="type" len='6' type='select' select='addtype' byValue='1' list='1' ancor='1' />
+		<field name="literature_id" len='6' type='select' tableNr='5' list='1' explain='(publication record)'/>
+		<field name="collation" len='50' list='1' ancor='1' />
+		<field name="publication" len='50' list='1' ancor='1' explain='(if previous fields not used)&amp;nbsp;'/>
+		<field name="text" type="text" hig='25' len='150'/>
+		<field name="Changed" len='40' />
+	</table>	
+	
+	<table 	name='literature' description="Literature records (Article references and PDF files)" 
+		nr='5' fieldNr='17' maxFieldHig='6' sortDefault='author, year' reference='reference' >	
+		
+		<field name="id" len='6'  list='1'/>
+		<field name="type" len='6' type='select' select='libtype' list='1' />
+		<field name="reference" len='30' list='1' ancor='1' />
+		<field name="author" len='100' maxLen='300' list='25'/>
+		<field name="year" len='10' />
+		<field name="title" type="text" hig='2' list='1' />
+		<field name="bulletin" type="text" hig='2' list='1' />
+		<field name="show_as" len="100" />
+		<field name="collation" len="50" list='1' />
+		<field name="publisher" len="200" />
+		<field name="ISBN" len='50'/>
+		<field name="pages" len='20'/>
+		<field name="data" type="text" hig='5' />
+		<field name="note" type="text" hig='5' />
+		<field name="copy" len='20'/>
+		<field name="Changed" len='40' />
+		<field name="url" len='100'/>
+		
+		<function name="citation" replace="id" url="?dBase=BromLiterature&amp;action=litCitation&amp;id=@id" />
+	</table>
+	
+	<table 	name='specimen' nr='6' description="Herbarium (mainly) Specimen records" 
+		fieldNr='22' maxFieldHig='10' sortDefault='country_id,division_id,coll_prim, coll_nbr' 
+		linkToTable='0' button="Report"  reference='coll_prim, coll_nbr, coll_add' >	
+		
+		<load path='path' field='url' rowspan='18' width='300' />		
+		<field name="id" len='6' list='1' ancor='1'/>
+		<field name="taxon_id" len='6' />
+		<field name="material" len='30' type='select' select='material' byValue='1' list='1' combine='1'/>
+		<field name="literature_id" len='6' type='select' tableNr='5' explain='(Publication record)' />
+		<field name="species" len='100' list='20' ancor='1' />
+		<field name="country_id" len='6' type='select' tableNr='12' combine='1' list='1' ancor='1'/>
+		<field name="division_id" len='6' type='select' tableNr='13' spaces='           ' dependent='country_id' list='1' ancor='1' />
+		<field name="country" len="25"  maxLen="35"  combine='1'/>
+		<field name="division1" len="25"  maxLen="35" spaces='          ' combine='1'  />
+		<field name="division2" len="23"  maxLen="35"    />
+		<field name="locality" type="text" len="120" hig='3'  />
+		<field name="altitude" len="10"  list='0' ancor='1' combine='1'/>
+		<field name="altitudeMax" len="10"  list='0' ancor='1' spaces="                   " />
+		<field name="coordinates" len="30"  list='0' ancor='1' combine='1'  />
+		<field name="latitude" len="10"  list='0' ancor='1' combine='1' />
+		<field name="longitude" len="10"  list='0' ancor='1' explain='Dec.'/>
+		<field name="habitat" type="text" len="120" hig='2' />
+		<field name="description" type="text" len="120" hig='2' />
+		<field name="coll_prim" len="20" maxLen="100"  list='20' ancor='1' combine='1' />
+		<field name="coll_nbr"  len="20"  list='1' ancor='1'  spaces="    " combine='1' />
+		<field name="coll_date" len="25"  spaces=" " />
+		<field name="coll_add" len="100"  list='20' ancor='1' />
+		<field name="acronym"  len="20"  maxLen="100"  list='1' ancor='1' combine='1'/>
+		<field name="duplicates"  len="50"  maxLen="100" />
+		<field name="sheets" len='10' combine='1'/>
+		<field name="barcode"  spaces="               " len="50"/>
+		<field name="identified" len="20" maxLen="100" combine='1' />
+		<field name="id_date" len="20" spaces="    " combine='1' />
+		<field name="id_type" len='5' type='select' byValue='1' choices='Det.,Rev.,Ver.'/>
+		<field name="identification_id" len='6' type='select' tableNr='11' dependent='specimen_id=id' explain='(accepted identification)' />
+		<field name="phenology" len="20" maxLen="50" />
+		<field name="notes" type="text" len="120" hig='3' />
+		<field name="label_header" len='100' maxLen="100" />
+		<field name="path" len='50' maxLen="50" combine='1'/>
+		<field name="url" len='60' maxLen='100' list='1' ancor='1'/>
+		<field name="Changed" len='40' />
+		
+		<function name="label -" replace="id" url="?dBase=specimen&amp;action=printHerbariumLabel&amp;id=@id&amp;number=1" />
+		<function name="saveIdent -" replace="id" url="?dBase=specimen&amp;action=saveIdent&amp;id=@id" />
+		<function name="linkIdent - " replace="id" url="?dBase=specimen&amp;action=linkIdent&amp;id=@id" />
+		<function name="citation -" replace="id" url="?dBase=specimen&amp;action=specimenCitation&amp;id=@id" />
+		<function name="2dupl -" replace="id" url="?dBase=specimen&amp;action=copy2duplicate&amp;id=@id" />		
+		<function name="2earth -" replace="id" url="?dBase=specimen&amp;action=googleEarth&amp;id=@id&amp;noheader" />		
+		<function name="kml" replace="id" url="?dBase=specimen&amp;action=googleEarth&amp;id=@id&amp;noheader&amp;KML" />		
+
+		<function name="IncludeSynonyms -" location='list' url="?dBase=specimen&amp;action=listConspecificSpecimen" />
+		<function name="DistrEC -" replace="id" location='list' url="?dBase=specimen&amp;action=distribution&amp;country=Ecuador" />
+					
+		<report name="Distribution - " headerName="Taxon Distribution" recordSeparator="; " fontFace="sans-serif" fontSize="2" 
+			url="?dBase=bromEncEdit&amp;tableNr=6&amp;action=report" arguments="parent_id,sort">
+			<field name="country" separator=": " process="upper case" />
+			<field name="division1" separator=", " />
+			<field name="division2" separator=", " />
+			<field name="locality" separator=", " />
+			<field name="altitude" prefix="Alt." suffix=" m." separator=", " />
+			<field name="coordinates" separator=", " />
+			<field name="coll_prim" separator=", " process="revers initials, italics" />
+			<field name="coll_add" separator=" " process="italics" />
+			<field name="coll_nbr" separator=", " process="italics" />
+			<field name="coll_date" separator=" "/>
+			<field name="acronym" prefix="(" suffix=")" separator=", " />
+		</report>
+	</table>
+	
+	<table name='duplicates' description="Specimen Duplicate or Second+ sheet records" 
+		nr='7' fieldNr='22' maxFieldHig='10' sortDefault='acronym' linkToTable='6' linkField='specimen_id'>	
+		
+		<load path='path' field='url' rowspan='7' width='250' />		
+		<field name="id" len='6' list='1' ancor='1'/>
+		<field name="specimen_id" len='6' list='1' ancor='1' />
+		<field name="material" len='30' type='select' select='material' byValue='1' list='1' combine='1'/>
+		<field name="literature_id" len='6' type='select' tableNr='5' explain='(Publication record)' />
+		<field name="acronym"  len="20"  maxLen="100"  list='1' ancor='1' combine='1'/>
+		<field name="sheets"  spaces="  " len='10' combine='1'/>
+		<field name="barcode"  spaces="  " len="50"  list='1' ancor='1'/>
+		<field name="identified" len="30" maxLen="100" combine='1' />
+		<field name="id_date" len="20"  />
+		<field name="notes" type="text" len="120" hig='3' />
+		<field name="path" len='50' combine='1' />
+		<field name="url" len='60' maxLen='100'/>
+		<field name="Changed" len='40' />
+	</table>
+		
+	<table name='checklist' description="Check List references" 
+		nr='8' fieldNr='10' maxFieldHig='6' sortDefault='taxon_id' reference='country, division1' linkToTable='0' >
+		
+		<field name="id" len='6'  list='1' ancor='1'/>
+		<field name="taxon_id" len='6' ancor='1'/>
+		<field name="literature_id" len='6' type='select' tableNr='5' explain='(Publication record)' list='1' anchor='1' />
+		<field name="name" type="text" hig='3' list='50' />
+		<field name="synonyms" type="text" hig='3' />
+		<field name="country" len='50' list='50' />
+		<field name="division1" len='100' MaxLen='250' list='50' />
+		<field name="division2" len='50' list='50' />
+		<field name="altitude" len='100' />
+		<field name="habitat"  len='100' MaxLen='250' />
+		<field name="type" len='100' MaxLen='250' />
+		<field name="voucher" type="text" hig='3' />
+		<field name="endemic" len='50' />
+		<field name="reference" type="text" hig='3'  />
+		<field name="infrasp" type="text" hig='3'/>
+		<field name="note" type="text" hig='3' />
+	</table>
+	
+	<table 	name='doc' description="Text Data from Documents (.doc, .pdf)" 
+		nr='9' fieldNr='25' maxFieldHig='20' sortDefault="id" reference="Genus, Species, InfraRank, InfraName" linkToTable='0'>
+		
+		<field name="id" len='6'  list='1' ancor='1' />
+		<field name="taxon_id" len='6'  list='1' ancor='1' combine='1' />
+		<field name="name" len='100' list='1' ancor='1' />
+		<field name="filename" len='50' list='1' ancor='1' noEdit='1'  combine='1' />
+		<field name="filedate" len='20' list='1' noEdit='1'  />
+		<field name="literature_id" len='6' type='select' tableNr='5' explain='(Publication record)' />
+		<field name="data" type="text" hig='35' len='120' />
+		
+		<function 
+			name="doc2desc" 
+			replace="id" 
+			url="?dBase=bromEncEdit&amp;action=convertDoc&amp;doc_id=@id&amp;insert" />
+	</table>
+	
+	<table 	name='images' description="Digital image records" 
+		nr='10' fieldNr='21' maxFieldHig='5' sortDefault="id" linkToTable='0'>	
+		
+		<load path='path' field='url' rowspan='18' width='400' />		
+		<field name="id" len='6' list='1' ancor='1' />
+		<field name="taxon_id" len='6' list='1' ancor='1' />
+		<field name="subject" len='25'  />
+		<field name="species" len='50' list='25' ancor='1' />
+		<field name="origin" len='20' list='1' ancor='1' />
+		<field name="acc_nr" len='20' list='1' />
+		<field name="seq" len='10' list='1' />
+		<field name="locality" type="text" len="97" hig='3' />
+		<field name="identified" len="30" maxLen="100" combine='1' />
+		<field name="id_date" len="20" spaces="  " />/>
+		<field name="date" len='50' list='1' ancor='1' />
+		<field name="notes" type="text" len="97" hig='2' />
+		<field name="path" len='50' />
+		<field name="url" len='50' maxLen='100' list='1' />
+	</table>
+	
+	<table name='identification' description="Specimen Identification" 
+		nr='11' fieldNr='6' sortDefault='date' linkToTable='6' linkField='specimen_id' reference="type, name, date, qualifier">
+		
+		<field name="id" len='6' list='1' ancor='1'/>
+		<field name="specimen_id" len='6' list='1' ancor='1' />
+		<field name="taxon_id" len='6' type='select' tableNr='0' list='1' ancor='1' />
+		<field name="type" len='5' type='select' byValue='1' choices='Det.,Rev.,Ver.'   list='1' />
+		<field name="name" len="50"  maxLen="100"  list='1' ancor='1'/>
+		<field name="date" len='50' list='1' ancor='1' />
+		<field name="qualifier" len="10" type='select' byValue='1' choices='aff.,cf.,forsan,incorrect,near' list='1' ancor='1'/>
+		<field name="notes" type="text" hig='3' len='150'/>
+	</table>
+
+	<table name='country' nr='12' fieldNr='4' maxFieldHig='2' sortDefault='sequence' reference='name'>		
+		<field name='id' len='6' />
+		<field name='name' len='30' list='1' ancor='1' />
+		<field name='division1' len='20' list='1' ancor='1' />
+		<field name='sequence' len='4'  list='1' ancor='1'/>
+	</table>	
+
+	<table name='division' nr='13' fieldNr='6' maxFieldHig='10' sortDefault='country_id, name' reference="name">			
+		<field name='id' len='6'/>
+		<field name='country_id' len='6' index='1'/>
+		<field name='type' len='20' list='1' ancor='1' />
+		<field name='name' len='30' list='1' ancor='1' />
+		<field name='capital' len='50'  list='1' ancor='1' />
+		<field name='sequence' len='4'  list='1' ancor='1'/>
+		<field name='WGS' len='10'  list='1' ancor='1' />
+		<field name='autoIndex' len='50' />
+	</table>	
+		
+
+</database>

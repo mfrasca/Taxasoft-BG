@@ -1,0 +1,280 @@
+<?xml version='1.0'?> 
+<database name='mompox' icon='tsoft.ico' showHeader='TaxasoftBG - Mompox Botanic Garden Database' nbrTables='7' listLines='20' maxFieldLen='135' language='EN' add='1'  edit='1'>
+
+<user name="Eric" />
+<user name="Mario" />
+<user name="Saskia" />
+
+<table name='taxon' description="Taxon Name Record"
+	nr='0' fieldNr='21' maxFieldHig='2' sortDefault="itf_gen,itf_sp,itf_isp2" reference="itf_gen,itf_sp,itf_isp,itf_isp2" >
+
+	<field name="id" len='6' list='1'/>
+	<field name="autoIndex" showAs='Full Name' len='100'/>
+	<field name="taxon_id" showAs="Parent" len='6' type='select' tableNr='0'/>
+	<field name="itf_fam_id" showAs="Family" len='6' type='select' tableNr='24' ancor='1' explain='(double click and start typing)'/>
+	<field name="itf_genhyb_id" showAs="Genus hybrid" len='6' type='select' tableNr='13' combine='1'/>
+	<field name="itf_sphyb_id" showAs="Species hybrid" len='6' type='select' tableNr='13' combine='1' spaces='         ' />
+	<field name="itf_spql_id" showAs="Species qualifier" len='6' type='select' tableNr='20'  spaces='          ' />
+	<field name="itf_gen" showAs="Genus" len='20' list='1' ancor='1' index='1'  combine='1'/>
+	<field name="itf_sp" showAs="Epithet" len='20' list='1' ancor='1' index='1'  combine='1' spaces='     ' />
+	<field name="itf_spau" showAs="Author" len='50' maxLen='60' list='0' spaces='         ' />
+	<field name="itf_isprk_id" showAs="is2.rank" len='6' type='select' tableNr='18' list='1' ancor='1' combine='1'/>
+	<field name="itf_isp" showAs="is.epithet" len='20' list='1' ancor='1' index='1'  combine='1' spaces='           '/>
+	<field name="itf_ispau" showAs="is.author" len='50' maxLen='60' list='0' spaces='      ' />
+	<field name="itf_isp2rk_id" showAs="is2.rank" len='6' type='select' tableNr='18' list='1' ancor='1' combine='1'/>
+	<field name="itf_isp2" showAs="is2.epithet" len='20' list='1' ancor='1' index='1'  combine='1' spaces='         '/>
+	<field name="itf_isp2au" showAs="is2.author" len='50' maxLen='60' list='0' spaces='    ' />
+	<field name="itf_cul" showAs="Cultivar" len='20' list='1' ancor='1' index='1' combine='1'/>
+	<field name="itf_culgrp" showAs="Cult.group" len='20' list='0' ancor='1' index='1' combine='1'/>
+	<field name="itf_trades" showAs="Trade_name" len='20' list='0' ancor='1' index='1' />
+	<field name="itf_vernam" showAs="Vernacular name" len='20' list='0' ancor='1' index='1'/>
+	<field name="itf_per_id" showAs="Perennation" len='6' type='select' tableNr='15' spaces='                                                       '/>
+	<field name="itf_accuse_id" showAs="Use" len='6' type='select' tableNr='23' />
+	<field name="type" showAs="Type specimen" type="text" hig='1' len='140'/>
+	<field name="publication" type="text" list='0' hig='1' len='140' />
+	<field name="literature_id" len='6' type='select' tableNr='5' explain='(Publication reference)' />
+	<field name="collation" len='20' list='0'  combine='1'/>
+	<field name="itf_georan" showAs="Distribution" type="text" hig='3'  len='140'/>
+	<field name="altitude" len='20' />
+	<field name="habitat" type="text" hig='1' len='140' />
+	<field name="notes" type="text" hig='1' len='140'/>
+	<field name="Changed" len='50' />
+		
+	<function 
+		name="WCSP - "
+		replace="itf_gen,itf_sp,itf_isprk,itf_isp"
+		url="http://apps.kew.org/wcsp/advsearch.do?genus=@itf_gen&amp;species=@itf_sp&amp;infraRank=@itf_isprk&amp;infraEpithet=@itf_isp&amp;page=x" />
+</table>
+
+<table 	name='accession' nr='1' description="Accession Specimen Record" 
+	fieldNr='22' maxFieldHig='10' sortDefault='itf_accid' linkToTable='0' reference='itf_accid' >	
+
+	<field name="id" len='6' list='1' ancor='1'/>
+	<field name="taxon_id" len='6' />
+	<field name="itf_accsta_id" showAs="Status" len='6' type='select' tableNr='8' />
+	<field name="itf_prot_id" showAs="Provenance" len='6' type='select' tableNr='16' combine='1'/>
+	<field name="itf_wpst_id" showAs="Status" len='6' type='select' tableNr='22'/>
+	<field name="itf_prohis_id" showAs="Propagation" len='6' type='select' tableNr='16' combine='1'/>
+	<field name="itf_acct_id" showAs="Type" len='6' type='select' tableNr='9' />
+	<field name="itf_acclin" showAs="Lineage" len='123' />
+	<field name="itf_accid" showAs="Access. nr." len='20' list='20' ancor='1' />
+	<field name="relation_id" len='6' type='select' tableNr='11' combine='1'/>
+	<field name="itf_donacc" showAs="Cross ref." len='50' spaces="                 "  />
+	<field name="country_id" len='6' type='select' tableNr='6' combine='1' list='1' ancor='1'/>
+	<field name="division_id" len='6' type='select' tableNr='7' spaces='           ' dependent='country_id' list='1' ancor='1' />
+	<field name="itf_loc" showAs="Locality" type="text" len="120" hig='3'  />
+	<field name="itf_alt" showAs="Elevation" len="10"  list='0' ancor='1' combine='1'/>
+	<field name="itf_altx" showAs="Max.elevation" len="10"  list='0' ancor='1' spaces="                   " />
+	<field name="latitude" len="10"  list='0' ancor='1' combine='1' />
+	<field name="longitude" len="10"  list='0' ancor='1' explain='(eg. -102.3405)'/>
+	<field name="itf_hab" showAs="Habitat" type="text" len="120" hig='2' />
+	<field name="description" type="text" len="120" hig='2' />
+	<field name="itf_cnam" showAs="Prim.col." len="20" maxLen="100"  list='20' ancor='1' combine='1' />
+	<field name="itf_cid" showAs="Coll.nbr."  len="20"  list='1' ancor='1'  spaces="    " combine='1' />
+	<field name="itf_cdat" showAs="Coll.date" len="25"  spaces=" " />
+	<field name="itf_nam2" showAs="Additional coll." len="100"  list='0' ancor='1' />
+	<field name="identification_id" len='6' type='select' tableNr='3' dependent='accession_id=id' explain='(accepted identification)' />
+	<field name="phenology" len="20" maxLen="50" />
+	<field name="itf_cnot" showAs="Coll.notes" type="text" len="120" hig='3' />
+	<field name="Changed" len='40' />
+</table>
+
+<table name='acc_location' description="Accession Location Record" 
+	nr='2' fieldNr='22' maxFieldHig='10' sortDefault='garden_location,sequence' linkToTable='1' linkField='accession_id'>	
+	<field name="id" len='6' list='1' ancor='1'/>
+	<field name="accession_id" len='6' list='0' ancor='1' />
+	<field name="garden_location"  len="50"  maxLen="50"  list='1' ancor='1'/>
+	<field name="sequence"  spaces="  " len='20'/>
+	<field name="itf_spe" showAs="Number of specimen"  spaces="  " len="50"  list='1' ancor='1'/>
+	<field name="itf_brs_id" showAs="Status" len='6' type='select' tableNr='10' />
+	<field name="label"  spaces="  " len="50"  list='1' ancor='1'/>
+	<field name="status" len="20"  />
+	<field name="remarks" type="text" len="120" hig='3' />
+	<field name="Changed" len='40' />
+</table>
+
+<table name='identification' description="Accession Identification" 
+	nr='3' fieldNr='6' sortDefault='date' linkToTable='1' linkField='accession_id' reference="type, name, date, itf_idql_id">
+
+	<field name="id" len='6' list='1' ancor='1'/>
+	<field name="accession_id" len='6' list='1' ancor='1' />
+	<field name="taxon_id" len='6' type='select' tableNr='0' list='1' ancor='1' />
+	<field name="type" len='5' type='select' byValue='1' choices='Det.,Rev.,Ver.'   list='1' />
+	<field name="name" len="50"  maxLen="100"  list='1' ancor='1'/>
+	<field name="date" len='50' list='1' ancor='1' />
+	<field name="itf_vlev_id" showAs="Level" len='6' type='select' tableNr='21' combine='1'/>
+	<field name="itf_idql_id" showAs="Qualifier" len='6' type='select' tableNr='14' combine='1'/>
+	<field name="itf_rkql_id" showAs="Rank Qual." len='6' type='select' tableNr='19' />
+	<field name="itf_vlit_id" showAs="Literature" len='6' type='select' tableNr='5' />
+	<field name="notes" type="text" hig='3' len='150'/>
+</table>
+
+<table 	name='objects' description="Link to Digital Images and Use of them"
+	nr='4' fieldNr='7' maxFieldHig='15' sortDefault='type' linkToTable='0'>	
+
+	<load path='path' field='url' rowspan='7' width='250' />		
+	<field name="id" len='6' list='1'  />
+	<field name="taxon_id" len='6' list='1' ancor='1' />
+	<field name="type" len='20' list='1' ancor='1' />
+	<field name="use" len='10' list='1' ancor='1' />
+	<field name="owner" len='20' list='1'/>
+	<field name="origin" type="text" hig='6' />
+	<field name="note" type="text" hig='6' />
+	<field name="prov" len='10' />
+	<field name="verification" len='20' />
+	<field name="verifier" len='50' />
+	<field name="graphics" len='50' />
+	<field name="url" len='100' />
+	<field name="file" type="file" len='35' target='url' destination="../Encyclopedia/brome/images/" allow=".jpg,.doc,.pdf" />
+</table>
+
+<table 	name='literature' description="Literature Reference record" nr='5' fieldNr='17' maxFieldHig='6' sortDefault='author, year' reference='reference' >	
+	<field name="id" len='6'  list='1'/>
+	<field name="type" len='6' type='select' select='libtype' list='1' />
+	<field name="reference" len='30' list='1' ancor='1' />
+	<field name="author" len='100' maxLen='300' list='25'/>
+	<field name="year" len='10' />
+	<field name="title" type="text" hig='2' list='1' />
+	<field name="bulletin" type="text" hig='2' list='1' />
+	<field name="show_as" len="100" />
+	<field name="collation" len="50" list='1' />
+	<field name="publisher" len="200" />
+	<field name="ISBN" len='50'/>
+	<field name="pages" len='20'/>
+	<field name="data" type="text" hig='5' />
+	<field name="note" type="text" hig='5' />
+	<field name="copy" len='20'/>
+	<field name="Changed" len='40' />
+	<field name="url" len='100'/>
+</table>
+
+<table name='country' nr='6' fieldNr='4' maxFieldHig='2' sortDefault='sequence' reference='name'>		
+	<field name='id' len='6' />
+	<field name='name' len='30' list='1' ancor='1' />
+	<field name='division1' len='20' list='1' ancor='1' />
+	<field name='sequence' len='4'  list='1' ancor='1'/>
+</table>	
+
+<table name='division' nr='7' fieldNr='6' maxFieldHig='10' sortDefault='country_id, name' reference="name">			
+	<field name='id' len='6'/>
+	<field name='country_id' len='6' index='1'/>
+	<field name='type' len='20' list='1' ancor='1' />
+	<field name='name' len='30' list='1' ancor='1' />
+	<field name='capital' len='50'  list='1' ancor='1' />
+	<field name='sequence' len='4'  list='1' ancor='1'/>
+	<field name='WGS' len='10'  list='1' ancor='1' />
+	<field name='autoIndex' len='50' />
+</table>
+
+<table name='itf_accsta' nr='8' fieldNr='2' maxFieldHig='2' sortDefault='sequence' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_acct' description="Accession Material Type" nr='9' fieldNr='2' maxFieldHig='2' sortDefault='sequence' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_brs' nr='10' fieldNr='2' maxFieldHig='2' sortDefault='sequence' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='relation' nr='11' fieldNr='2' maxFieldHig='2' sortDefault='code' reference='code,name'>		
+	<field name="id" len='6'  list='1'/>
+	<field name="itf_dont_id" showAs="Status" len='6' type='select' tableNr='12' />
+	<field name='code' len='20' />
+	<field name='name' len='150' list='1' ancor='1' />
+	<field name='address' len='150' list='1' ancor='1' />
+	<field name='postcode' len='20' list='1' ancor='1' />
+	<field name='city' len='50' list='1' ancor='1' />
+	<field name='country_id' len='6' list='1' ancor='1' />
+	<field name='telephone' len='50' list='1' ancor='1' />
+	<field name='fax' len='50' list='1' ancor='1' />
+	<field name='email' len='50' list='1' ancor='1' />
+	<field name='url' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_dont' nr='12' fieldNr='2' maxFieldHig='2' sortDefault='description' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_hyb' description="Hybrid Flag" nr='13' fieldNr='2' maxFieldHig='2' sortDefault='description' reference='code'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_idql' nr='14' fieldNr='2' maxFieldHig='2' sortDefault='description' reference='code'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_per' nr='15' fieldNr='2' maxFieldHig='2' sortDefault='description' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_prohis' description="Propagation History Flag" nr='16' fieldNr='2' maxFieldHig='2' sortDefault='description' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_prot' nr='17' description="Provenance Type Flag" fieldNr='2' maxFieldHig='2' sortDefault='description' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_rk' description="Infraspecific Rank" nr='18' fieldNr='2' maxFieldHig='2' sortDefault='code' reference='code'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_rkql' description="Rank Qualified Flag" nr='19' fieldNr='2' maxFieldHig='2' sortDefault='description' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_spql' description="Species Qualified" nr='20' fieldNr='2' maxFieldHig='2' sortDefault='code' reference='code'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_vlev' description="Verifification Level" nr='21' fieldNr='2' maxFieldHig='2' sortDefault='code' reference='code'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_wpst' description="Species Qualified" nr='22' fieldNr='2' maxFieldHig='2' sortDefault='code' reference='code'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='itf_accuse' nr='23' fieldNr='2' maxFieldHig='2' sortDefault='description' reference='description'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='code' len='20' />
+	<field name='description' len='150' list='1' ancor='1' />
+</table>	
+
+<table name='family' nr='24' fieldNr='2' maxFieldHig='2' sortDefault='name' reference='name'>		
+	<field name="id" len='6'  list='1'/>
+	<field name='name' len='150' list='1' ancor='1' />
+</table>	
+
+
+</database>

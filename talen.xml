@@ -1,0 +1,476 @@
+<HEADER version="Conversie3.0.00" owner="Botanische Tuinen" user="Systeembeheerder" creation_date="14-01-2003" creation_time="18:35:46" />
+<Settings last_taxon_id="1" >
+</Settings>
+<Users>
+	<User UserId="1" Login="ADMIN" UserName="Systeembeheerder" >
+	</User>
+</Users>
+<BTDatabase OID="99999" m_user_id="0" m_last_change_date="20030114" m_last_change_time="18:35" >
+
+
+<m_language>
+   <BTLanguage OID="MRC_1" m_code="aar" m_description="Afar"/>
+   <BTLanguage OID="MRC_2" m_code="abk" m_description="Abkhaz"/>
+   <BTLanguage OID="MRC_3" m_code="ace" m_description="Achinese"/>
+   <BTLanguage OID="MRC_4" m_code="ach" m_description="Acoli"/>
+   <BTLanguage OID="MRC_5" m_code="ada" m_description="Adangme"/>
+   <BTLanguage OID="MRC_6" m_code="afa" m_description="Afroasiatic (Other)"/>
+   <BTLanguage OID="MRC_7" m_code="afh" m_description="Afrihili (Artificial language)"/>
+   <BTLanguage OID="MRC_8" m_code="afr" m_description="Afrikaans"/>
+   <BTLanguage OID="MRC_9" m_code="-ajm" m_description="Aljamía"/>
+   <BTLanguage OID="MRC_10" m_code="aka" m_description="Akan"/>
+   <BTLanguage OID="MRC_11" m_code="akk" m_description="Akkadian"/>
+   <BTLanguage OID="MRC_12" m_code="alb" m_description="Albanian"/>
+   <BTLanguage OID="MRC_13" m_code="ale" m_description="Aleut"/>
+   <BTLanguage OID="MRC_14" m_code="alg" m_description="Algonquian (Other)"/>
+   <BTLanguage OID="MRC_15" m_code="amh" m_description="Amharic"/>
+   <BTLanguage OID="MRC_16" m_code="ang" m_description="English, Old (ca. 450-1100)"/>
+   <BTLanguage OID="MRC_17" m_code="apa" m_description="Apache languages"/>
+   <BTLanguage OID="MRC_18" m_code="ara" m_description="Arabic"/>
+   <BTLanguage OID="MRC_19" m_code="arc" m_description="Aramaic"/>
+   <BTLanguage OID="MRC_20" m_code="arm" m_description="Armenian"/>
+   <BTLanguage OID="MRC_21" m_code="arn" m_description="Mapuche"/>
+   <BTLanguage OID="MRC_22" m_code="arp" m_description="Arapaho"/>
+   <BTLanguage OID="MRC_23" m_code="art" m_description="Artificial (Other)"/>
+   <BTLanguage OID="MRC_24" m_code="arw" m_description="Arawak"/>
+   <BTLanguage OID="MRC_25" m_code="asm" m_description="Assamese"/>
+   <BTLanguage OID="MRC_26" m_code="ath" m_description="Athapascan (Other)"/>
+   <BTLanguage OID="MRC_27" m_code="aus" m_description="Australian languages"/>
+   <BTLanguage OID="MRC_28" m_code="ava" m_description="Avaric"/>
+   <BTLanguage OID="MRC_29" m_code="ave" m_description="Avestan"/>
+   <BTLanguage OID="MRC_30" m_code="awa" m_description="Awadhi"/>
+   <BTLanguage OID="MRC_31" m_code="aym" m_description="Aymara"/>
+   <BTLanguage OID="MRC_32" m_code="aze" m_description="Azerbaijani"/>
+   <BTLanguage OID="MRC_33" m_code="bad" m_description="Banda"/>
+   <BTLanguage OID="MRC_34" m_code="bai" m_description="Bamileke languages"/>
+   <BTLanguage OID="MRC_35" m_code="bak" m_description="Bashkir"/>
+   <BTLanguage OID="MRC_36" m_code="bal" m_description="Baluchi"/>
+   <BTLanguage OID="MRC_37" m_code="bam" m_description="Bambara"/>
+   <BTLanguage OID="MRC_38" m_code="ban" m_description="Balinese"/>
+   <BTLanguage OID="MRC_39" m_code="baq" m_description="Basque"/>
+   <BTLanguage OID="MRC_40" m_code="bas" m_description="Basa"/>
+   <BTLanguage OID="MRC_41" m_code="bat" m_description="Baltic (Other)"/>
+   <BTLanguage OID="MRC_42" m_code="bej" m_description="Beja"/>
+   <BTLanguage OID="MRC_43" m_code="bel" m_description="Belarusian"/>
+   <BTLanguage OID="MRC_44" m_code="bem" m_description="Bemba"/>
+   <BTLanguage OID="MRC_45" m_code="ben" m_description="Bengali"/>
+   <BTLanguage OID="MRC_46" m_code="ber" m_description="Berber (Other)"/>
+   <BTLanguage OID="MRC_47" m_code="bho" m_description="Bhojpuri"/>
+   <BTLanguage OID="MRC_48" m_code="bih" m_description="Bihari"/>
+   <BTLanguage OID="MRC_49" m_code="bik" m_description="Bikol"/>
+   <BTLanguage OID="MRC_50" m_code="bin" m_description="Bini"/>
+   <BTLanguage OID="MRC_51" m_code="bis" m_description="Bislama"/>
+   <BTLanguage OID="MRC_52" m_code="bla" m_description="Siksika"/>
+   <BTLanguage OID="MRC_53" m_code="bnt" m_description="Bantu (Other)"/>
+   <BTLanguage OID="MRC_54" m_code="bos" m_description="Bosnian"/>
+   <BTLanguage OID="MRC_55" m_code="bra" m_description="Braj"/>
+   <BTLanguage OID="MRC_56" m_code="bre" m_description="Breton"/>
+   <BTLanguage OID="MRC_57" m_code="btk" m_description="Batak"/>
+   <BTLanguage OID="MRC_58" m_code="bua" m_description="Buriat"/>
+   <BTLanguage OID="MRC_59" m_code="bug" m_description="Bugis"/>
+   <BTLanguage OID="MRC_60" m_code="bul" m_description="Bulgarian"/>
+   <BTLanguage OID="MRC_61" m_code="bur" m_description="Burmese"/>
+   <BTLanguage OID="MRC_62" m_code="cad" m_description="Caddo"/>
+   <BTLanguage OID="MRC_63" m_code="cai" m_description="Central American Indian (Other)"/>
+   <BTLanguage OID="MRC_64" m_code="-cam" m_description="Khmer"/>
+   <BTLanguage OID="MRC_65" m_code="car" m_description="Carib"/>
+   <BTLanguage OID="MRC_66" m_code="cat" m_description="Catalan"/>
+   <BTLanguage OID="MRC_67" m_code="cau" m_description="Caucasian (Other)"/>
+   <BTLanguage OID="MRC_68" m_code="ceb" m_description="Cebuano"/>
+   <BTLanguage OID="MRC_69" m_code="cel" m_description="Celtic (Other)"/>
+   <BTLanguage OID="MRC_70" m_code="cha" m_description="Chamorro"/>
+   <BTLanguage OID="MRC_71" m_code="chb" m_description="Chibcha"/>
+   <BTLanguage OID="MRC_72" m_code="che" m_description="Chechen"/>
+   <BTLanguage OID="MRC_73" m_code="chg" m_description="Chagatai"/>
+   <BTLanguage OID="MRC_74" m_code="chi" m_description="Chinese"/>
+   <BTLanguage OID="MRC_75" m_code="chk" m_description="Truk"/>
+   <BTLanguage OID="MRC_76" m_code="chm" m_description="Mari"/>
+   <BTLanguage OID="MRC_77" m_code="chn" m_description="Chinook jargon"/>
+   <BTLanguage OID="MRC_78" m_code="cho" m_description="Choctaw"/>
+   <BTLanguage OID="MRC_79" m_code="chp" m_description="Chipewyan"/>
+   <BTLanguage OID="MRC_80" m_code="chr" m_description="Cherokee"/>
+   <BTLanguage OID="MRC_81" m_code="chu" m_description="Church Slavic"/>
+   <BTLanguage OID="MRC_82" m_code="chv" m_description="Chuvash"/>
+   <BTLanguage OID="MRC_83" m_code="chy" m_description="Cheyenne"/>
+   <BTLanguage OID="MRC_84" m_code="cmc" m_description="Chamic languages"/>
+   <BTLanguage OID="MRC_85" m_code="cop" m_description="Coptic"/>
+   <BTLanguage OID="MRC_86" m_code="cor" m_description="Cornish"/>
+   <BTLanguage OID="MRC_87" m_code="cos" m_description="Corsican"/>
+   <BTLanguage OID="MRC_88" m_code="cpe" m_description="Creoles and Pidgins, English-based (Other)"/>
+   <BTLanguage OID="MRC_89" m_code="cpf" m_description="Creoles and Pidgins, French-based (Other)"/>
+   <BTLanguage OID="MRC_90" m_code="cpp" m_description="Creoles and Pidgins, Portuguese-based (Other)"/>
+   <BTLanguage OID="MRC_91" m_code="cre" m_description="Cree"/>
+   <BTLanguage OID="MRC_92" m_code="crp" m_description="Creoles and Pidgins (Other)"/>
+   <BTLanguage OID="MRC_93" m_code="cus" m_description="Cushitic (Other)"/>
+   <BTLanguage OID="MRC_94" m_code="cze" m_description="Czech"/>
+   <BTLanguage OID="MRC_95" m_code="dak" m_description="Dakota"/>
+   <BTLanguage OID="MRC_96" m_code="dan" m_description="Danish"/>
+   <BTLanguage OID="MRC_97" m_code="day" m_description="Dayak"/>
+   <BTLanguage OID="MRC_98" m_code="del" m_description="Delaware"/>
+   <BTLanguage OID="MRC_99" m_code="den" m_description="Slave"/>
+   <BTLanguage OID="MRC_100" m_code="dgr" m_description="Dogrib"/>
+   <BTLanguage OID="MRC_101" m_code="din" m_description="Dinka"/>
+   <BTLanguage OID="MRC_102" m_code="div" m_description="Divehi"/>
+   <BTLanguage OID="MRC_103" m_code="doi" m_description="Dogri"/>
+   <BTLanguage OID="MRC_104" m_code="dra" m_description="Dravidian (Other)"/>
+   <BTLanguage OID="MRC_105" m_code="dua" m_description="Duala"/>
+   <BTLanguage OID="MRC_106" m_code="dum" m_description="Dutch, Middle (ca. 1050-1350)"/>
+   <BTLanguage OID="MRC_107" m_code="dut" m_description="Dutch"/>
+   <BTLanguage OID="MRC_108" m_code="dyu" m_description="Dyula"/>
+   <BTLanguage OID="MRC_109" m_code="dzo" m_description="Dzongkha"/>
+   <BTLanguage OID="MRC_110" m_code="efi" m_description="Efik"/>
+   <BTLanguage OID="MRC_111" m_code="egy" m_description="Egyptian"/>
+   <BTLanguage OID="MRC_112" m_code="eka" m_description="Ekajuk"/>
+   <BTLanguage OID="MRC_113" m_code="elx" m_description="Elamite"/>
+   <BTLanguage OID="MRC_114" m_code="eng" m_description="English"/>
+   <BTLanguage OID="MRC_115" m_code="enm" m_description="English, Middle (1100-1500)"/>
+   <BTLanguage OID="MRC_116" m_code="epo" m_description="Esperanto"/>
+   <BTLanguage OID="MRC_117" m_code="-esk" m_description="Eskimo languages"/>
+   <BTLanguage OID="MRC_118" m_code="-esp" m_description="Esperanto"/>
+   <BTLanguage OID="MRC_119" m_code="est" m_description="Estonian"/>
+   <BTLanguage OID="MRC_120" m_code="-eth" m_description="Ethiopic"/>
+   <BTLanguage OID="MRC_121" m_code="ewe" m_description="Ewe"/>
+   <BTLanguage OID="MRC_122" m_code="ewo" m_description="Ewondo"/>
+   <BTLanguage OID="MRC_123" m_code="fan" m_description="Fang"/>
+   <BTLanguage OID="MRC_124" m_code="fao" m_description="Faroese"/>
+   <BTLanguage OID="MRC_125" m_code="-far" m_description="Faroese"/>
+   <BTLanguage OID="MRC_126" m_code="fat" m_description="Fanti"/>
+   <BTLanguage OID="MRC_127" m_code="fij" m_description="Fijian"/>
+   <BTLanguage OID="MRC_128" m_code="fin" m_description="Finnish"/>
+   <BTLanguage OID="MRC_129" m_code="fiu" m_description="Finno-Ugrian (Other)"/>
+   <BTLanguage OID="MRC_130" m_code="fon" m_description="Fon"/>
+   <BTLanguage OID="MRC_131" m_code="fre" m_description="French"/>
+   <BTLanguage OID="MRC_132" m_code="-fri" m_description="Frisian"/>
+   <BTLanguage OID="MRC_133" m_code="frm" m_description="French, Middle (ca. 1400-1600)"/>
+   <BTLanguage OID="MRC_134" m_code="fro" m_description="French, Old (ca. 842-1400)"/>
+   <BTLanguage OID="MRC_135" m_code="fry" m_description="Frisian"/>
+   <BTLanguage OID="MRC_136" m_code="ful" m_description="Fula"/>
+   <BTLanguage OID="MRC_137" m_code="fur" m_description="Friulian"/>
+   <BTLanguage OID="MRC_138" m_code="gaa" m_description="Gã"/>
+   <BTLanguage OID="MRC_139" m_code="-gae" m_description="Scottish Gaelic"/>
+   <BTLanguage OID="MRC_140" m_code="-gag" m_description="Galician"/>
+   <BTLanguage OID="MRC_141" m_code="-gal" m_description="Oromo"/>
+   <BTLanguage OID="MRC_142" m_code="gay" m_description="Gayo"/>
+   <BTLanguage OID="MRC_143" m_code="gba" m_description="Gbaya"/>
+   <BTLanguage OID="MRC_144" m_code="gem" m_description="Germanic (Other)"/>
+   <BTLanguage OID="MRC_145" m_code="geo" m_description="Georgian"/>
+   <BTLanguage OID="MRC_146" m_code="ger" m_description="German"/>
+   <BTLanguage OID="MRC_147" m_code="gez" m_description="Ethiopic"/>
+   <BTLanguage OID="MRC_148" m_code="gil" m_description="Gilbertese"/>
+   <BTLanguage OID="MRC_149" m_code="gla" m_description="Scottish Gaelic"/>
+   <BTLanguage OID="MRC_150" m_code="gle" m_description="Irish"/>
+   <BTLanguage OID="MRC_151" m_code="glg" m_description="Galician"/>
+   <BTLanguage OID="MRC_152" m_code="glv" m_description="Manx"/>
+   <BTLanguage OID="MRC_153" m_code="gmh" m_description="German, Middle High (ca. 1050-1500)"/>
+   <BTLanguage OID="MRC_154" m_code="goh" m_description="German, Old High (ca. 750-1050)"/>
+   <BTLanguage OID="MRC_155" m_code="gon" m_description="Gondi"/>
+   <BTLanguage OID="MRC_156" m_code="gor" m_description="Gorontalo"/>
+   <BTLanguage OID="MRC_157" m_code="got" m_description="Gothic"/>
+   <BTLanguage OID="MRC_158" m_code="grb" m_description="Grebo"/>
+   <BTLanguage OID="MRC_159" m_code="grc" m_description="Greek, Ancient (to 1453)"/>
+   <BTLanguage OID="MRC_160" m_code="gre" m_description="Greek, Modern (1453- )"/>
+   <BTLanguage OID="MRC_161" m_code="grn" m_description="Guarani"/>
+   <BTLanguage OID="MRC_162" m_code="-gua" m_description="Guarani"/>
+   <BTLanguage OID="MRC_163" m_code="guj" m_description="Gujarati"/>
+   <BTLanguage OID="MRC_164" m_code="gwi" m_description="Gwich'in"/>
+   <BTLanguage OID="MRC_165" m_code="hai" m_description="Haida"/>
+   <BTLanguage OID="MRC_166" m_code="hau" m_description="Hausa"/>
+   <BTLanguage OID="MRC_167" m_code="haw" m_description="Hawaiian"/>
+   <BTLanguage OID="MRC_168" m_code="heb" m_description="Hebrew"/>
+   <BTLanguage OID="MRC_169" m_code="her" m_description="Herero"/>
+   <BTLanguage OID="MRC_170" m_code="hil" m_description="Hiligaynon"/>
+   <BTLanguage OID="MRC_171" m_code="him" m_description="Himachali"/>
+   <BTLanguage OID="MRC_172" m_code="hin" m_description="Hindi"/>
+   <BTLanguage OID="MRC_173" m_code="hit" m_description="Hittite"/>
+   <BTLanguage OID="MRC_174" m_code="hmn" m_description="Hmong"/>
+   <BTLanguage OID="MRC_175" m_code="hmo" m_description="Hiri Motu"/>
+   <BTLanguage OID="MRC_176" m_code="hun" m_description="Hungarian"/>
+   <BTLanguage OID="MRC_177" m_code="hup" m_description="Hupa"/>
+   <BTLanguage OID="MRC_178" m_code="iba" m_description="Iban"/>
+   <BTLanguage OID="MRC_179" m_code="ibo" m_description="Igbo"/>
+   <BTLanguage OID="MRC_180" m_code="ice" m_description="Icelandic"/>
+   <BTLanguage OID="MRC_181" m_code="ijo" m_description="Ijo"/>
+   <BTLanguage OID="MRC_182" m_code="iku" m_description="Inuktitut"/>
+   <BTLanguage OID="MRC_183" m_code="ile" m_description="Interlingue"/>
+   <BTLanguage OID="MRC_184" m_code="ilo" m_description="Iloko"/>
+   <BTLanguage OID="MRC_185" m_code="ina" m_description="Interlingua (International Auxiliary Language Association)"/>
+   <BTLanguage OID="MRC_186" m_code="inc" m_description="Indic (Other)"/>
+   <BTLanguage OID="MRC_187" m_code="ind" m_description="Indonesian"/>
+   <BTLanguage OID="MRC_188" m_code="ine" m_description="Indo-European (Other)"/>
+   <BTLanguage OID="MRC_189" m_code="-int" m_description="Interlingua (International Auxiliary Language Association)"/>
+   <BTLanguage OID="MRC_190" m_code="ipk" m_description="Inupiaq"/>
+   <BTLanguage OID="MRC_191" m_code="ira" m_description="Iranian (Other)"/>
+   <BTLanguage OID="MRC_192" m_code="-iri" m_description="Irish"/>
+   <BTLanguage OID="MRC_193" m_code="iro" m_description="Iroquoian (Other)"/>
+   <BTLanguage OID="MRC_194" m_code="ita" m_description="Italian"/>
+   <BTLanguage OID="MRC_195" m_code="jav" m_description="Javanese"/>
+   <BTLanguage OID="MRC_196" m_code="jpn" m_description="Japanese"/>
+   <BTLanguage OID="MRC_197" m_code="jpr" m_description="Judeo-Persian"/>
+   <BTLanguage OID="MRC_198" m_code="jrb" m_description="Judeo-Arabic"/>
+   <BTLanguage OID="MRC_199" m_code="kaa" m_description="Kara-Kalpak"/>
+   <BTLanguage OID="MRC_200" m_code="kab" m_description="Kabyle"/>
+   <BTLanguage OID="MRC_201" m_code="kac" m_description="Kachin"/>
+   <BTLanguage OID="MRC_202" m_code="kal" m_description="Kalâtdlisut"/>
+   <BTLanguage OID="MRC_203" m_code="kam" m_description="Kamba"/>
+   <BTLanguage OID="MRC_204" m_code="kan" m_description="Kannada"/>
+   <BTLanguage OID="MRC_205" m_code="kar" m_description="Karen"/>
+   <BTLanguage OID="MRC_206" m_code="kas" m_description="Kashmiri"/>
+   <BTLanguage OID="MRC_207" m_code="kau" m_description="Kanuri"/>
+   <BTLanguage OID="MRC_208" m_code="kaw" m_description="Kawi"/>
+   <BTLanguage OID="MRC_209" m_code="kaz" m_description="Kazakh"/>
+   <BTLanguage OID="MRC_210" m_code="kha" m_description="Khasi"/>
+   <BTLanguage OID="MRC_211" m_code="khi" m_description="Khoisan (Other)"/>
+   <BTLanguage OID="MRC_212" m_code="khm" m_description="Khmer"/>
+   <BTLanguage OID="MRC_213" m_code="kho" m_description="Khotanese"/>
+   <BTLanguage OID="MRC_214" m_code="kik" m_description="Kikuyu"/>
+   <BTLanguage OID="MRC_215" m_code="kin" m_description="Kinyarwanda"/>
+   <BTLanguage OID="MRC_216" m_code="kir" m_description="Kyrgyz"/>
+   <BTLanguage OID="MRC_217" m_code="kmb" m_description="Kimbundu"/>
+   <BTLanguage OID="MRC_218" m_code="kok" m_description="Konkani"/>
+   <BTLanguage OID="MRC_219" m_code="kom" m_description="Komi"/>
+   <BTLanguage OID="MRC_220" m_code="kon" m_description="Kongo"/>
+   <BTLanguage OID="MRC_221" m_code="kor" m_description="Korean"/>
+   <BTLanguage OID="MRC_222" m_code="kos" m_description="Kusaie"/>
+   <BTLanguage OID="MRC_223" m_code="kpe" m_description="Kpelle"/>
+   <BTLanguage OID="MRC_224" m_code="kro" m_description="Kru"/>
+   <BTLanguage OID="MRC_225" m_code="kru" m_description="Kurukh"/>
+   <BTLanguage OID="MRC_226" m_code="kua" m_description="Kuanyama"/>
+   <BTLanguage OID="MRC_227" m_code="kum" m_description="Kumyk"/>
+   <BTLanguage OID="MRC_228" m_code="kur" m_description="Kurdish"/>
+   <BTLanguage OID="MRC_229" m_code="-kus" m_description="Kusaie"/>
+   <BTLanguage OID="MRC_230" m_code="kut" m_description="Kutenai"/>
+   <BTLanguage OID="MRC_231" m_code="lad" m_description="Ladino"/>
+   <BTLanguage OID="MRC_232" m_code="lah" m_description="Lahnda"/>
+   <BTLanguage OID="MRC_233" m_code="lam" m_description="Lamba"/>
+   <BTLanguage OID="MRC_234" m_code="-lan" m_description="Occitan (post-1500)"/>
+   <BTLanguage OID="MRC_235" m_code="lao" m_description="Lao"/>
+   <BTLanguage OID="MRC_236" m_code="-lap" m_description="Sami"/>
+   <BTLanguage OID="MRC_237" m_code="lat" m_description="Latin"/>
+   <BTLanguage OID="MRC_238" m_code="lav" m_description="Latvian"/>
+   <BTLanguage OID="MRC_239" m_code="lez" m_description="Lezgian"/>
+   <BTLanguage OID="MRC_240" m_code="lin" m_description="Lingala"/>
+   <BTLanguage OID="MRC_241" m_code="lit" m_description="Lithuanian"/>
+   <BTLanguage OID="MRC_242" m_code="lol" m_description="Mongo-Nkundu"/>
+   <BTLanguage OID="MRC_243" m_code="loz" m_description="Lozi"/>
+   <BTLanguage OID="MRC_244" m_code="ltz" m_description="Letzeburgesch"/>
+   <BTLanguage OID="MRC_245" m_code="lua" m_description="Luba-Lulua"/>
+   <BTLanguage OID="MRC_246" m_code="lub" m_description="Luba-Katanga"/>
+   <BTLanguage OID="MRC_247" m_code="lug" m_description="Ganda"/>
+   <BTLanguage OID="MRC_248" m_code="lui" m_description="Luiseño"/>
+   <BTLanguage OID="MRC_249" m_code="lun" m_description="Lunda"/>
+   <BTLanguage OID="MRC_250" m_code="luo" m_description="Luo (Kenya and Tanzania)"/>
+   <BTLanguage OID="MRC_251" m_code="lus" m_description="Lushai"/>
+   <BTLanguage OID="MRC_252" m_code="mac" m_description="Macedonian"/>
+   <BTLanguage OID="MRC_253" m_code="mad" m_description="Madurese"/>
+   <BTLanguage OID="MRC_254" m_code="mag" m_description="Magahi"/>
+   <BTLanguage OID="MRC_255" m_code="mah" m_description="Marshall"/>
+   <BTLanguage OID="MRC_256" m_code="mai" m_description="Maithili"/>
+   <BTLanguage OID="MRC_257" m_code="mak" m_description="Makasar"/>
+   <BTLanguage OID="MRC_258" m_code="mal" m_description="Malayalam"/>
+   <BTLanguage OID="MRC_259" m_code="man" m_description="Mandingo"/>
+   <BTLanguage OID="MRC_260" m_code="mao" m_description="Maori"/>
+   <BTLanguage OID="MRC_261" m_code="map" m_description="Austronesian (Other)"/>
+   <BTLanguage OID="MRC_262" m_code="mar" m_description="Marathi"/>
+   <BTLanguage OID="MRC_263" m_code="mas" m_description="Masai"/>
+   <BTLanguage OID="MRC_264" m_code="-max" m_description="Manx"/>
+   <BTLanguage OID="MRC_265" m_code="may" m_description="Malay"/>
+   <BTLanguage OID="MRC_266" m_code="mdr" m_description="Mandar"/>
+   <BTLanguage OID="MRC_267" m_code="men" m_description="Mende"/>
+   <BTLanguage OID="MRC_268" m_code="mga" m_description="Irish, Middle (ca. 1100-1550)"/>
+   <BTLanguage OID="MRC_269" m_code="mic" m_description="Micmac"/>
+   <BTLanguage OID="MRC_270" m_code="min" m_description="Minangkabau"/>
+   <BTLanguage OID="MRC_271" m_code="mis" m_description="Miscellaneous languages"/>
+   <BTLanguage OID="MRC_272" m_code="mkh" m_description="Mon-Khmer (Other)"/>
+   <BTLanguage OID="MRC_273" m_code="-mla" m_description="Malagasy"/>
+   <BTLanguage OID="MRC_274" m_code="mlg" m_description="Malagasy"/>
+   <BTLanguage OID="MRC_275" m_code="mlt" m_description="Maltese"/>
+   <BTLanguage OID="MRC_276" m_code="mnc" m_description="Manchu"/>
+   <BTLanguage OID="MRC_277" m_code="mni" m_description="Manipuri"/>
+   <BTLanguage OID="MRC_278" m_code="mno" m_description="Manobo languages"/>
+   <BTLanguage OID="MRC_279" m_code="moh" m_description="Mohawk"/>
+   <BTLanguage OID="MRC_280" m_code="mol" m_description="Moldavian"/>
+   <BTLanguage OID="MRC_281" m_code="mon" m_description="Mongolian"/>
+   <BTLanguage OID="MRC_282" m_code="mos" m_description="Mooré"/>
+   <BTLanguage OID="MRC_283" m_code="mul" m_description="Multiple languages"/>
+   <BTLanguage OID="MRC_284" m_code="mun" m_description="Munda (Other)"/>
+   <BTLanguage OID="MRC_285" m_code="mus" m_description="Creek"/>
+   <BTLanguage OID="MRC_286" m_code="mwr" m_description="Marwari"/>
+   <BTLanguage OID="MRC_287" m_code="myn" m_description="Mayan languages"/>
+   <BTLanguage OID="MRC_288" m_code="nah" m_description="Nahuatl"/>
+   <BTLanguage OID="MRC_289" m_code="nai" m_description="North American Indian (Other)"/>
+   <BTLanguage OID="MRC_290" m_code="nau" m_description="Nauru"/>
+   <BTLanguage OID="MRC_291" m_code="nav" m_description="Navajo"/>
+   <BTLanguage OID="MRC_292" m_code="nbl" m_description="Ndebele (South Africa)"/>
+   <BTLanguage OID="MRC_293" m_code="nde" m_description="Ndebele (Zimbabwe)"/>
+   <BTLanguage OID="MRC_294" m_code="ndo" m_description="Ndonga"/>
+   <BTLanguage OID="MRC_295" m_code="nep" m_description="Nepali"/>
+   <BTLanguage OID="MRC_296" m_code="new" m_description="Newari"/>
+   <BTLanguage OID="MRC_297" m_code="nia" m_description="Nias"/>
+   <BTLanguage OID="MRC_298" m_code="nic" m_description="Niger-Kordofanian (Other)"/>
+   <BTLanguage OID="MRC_299" m_code="niu" m_description="Niuean"/>
+   <BTLanguage OID="MRC_300" m_code="non" m_description="Old Norse"/>
+   <BTLanguage OID="MRC_301" m_code="nor" m_description="Norwegian"/>
+   <BTLanguage OID="MRC_302" m_code="nso" m_description="Northern Sotho"/>
+   <BTLanguage OID="MRC_303" m_code="nub" m_description="Nubian languages"/>
+   <BTLanguage OID="MRC_304" m_code="nya" m_description="Nyanja"/>
+   <BTLanguage OID="MRC_305" m_code="nym" m_description="Nyamwezi"/>
+   <BTLanguage OID="MRC_306" m_code="nyn" m_description="Nyankole"/>
+   <BTLanguage OID="MRC_307" m_code="nyo" m_description="Nyoro"/>
+   <BTLanguage OID="MRC_308" m_code="nzi" m_description="Nzima"/>
+   <BTLanguage OID="MRC_309" m_code="oci" m_description="Occitan (post-1500)"/>
+   <BTLanguage OID="MRC_310" m_code="oji" m_description="Ojibwa"/>
+   <BTLanguage OID="MRC_311" m_code="ori" m_description="Oriya"/>
+   <BTLanguage OID="MRC_312" m_code="orm" m_description="Oromo"/>
+   <BTLanguage OID="MRC_313" m_code="osa" m_description="Osage"/>
+   <BTLanguage OID="MRC_314" m_code="oss" m_description="Ossetic"/>
+   <BTLanguage OID="MRC_315" m_code="ota" m_description="Turkish, Ottoman"/>
+   <BTLanguage OID="MRC_316" m_code="oto" m_description="Otomian languages"/>
+   <BTLanguage OID="MRC_317" m_code="paa" m_description="Papuan (Other)"/>
+   <BTLanguage OID="MRC_318" m_code="pag" m_description="Pangasinan"/>
+   <BTLanguage OID="MRC_319" m_code="pal" m_description="Pahlavi"/>
+   <BTLanguage OID="MRC_320" m_code="pam" m_description="Pampanga"/>
+   <BTLanguage OID="MRC_321" m_code="pan" m_description="Panjabi"/>
+   <BTLanguage OID="MRC_322" m_code="pap" m_description="Papiamento"/>
+   <BTLanguage OID="MRC_323" m_code="pau" m_description="Palauan"/>
+   <BTLanguage OID="MRC_324" m_code="peo" m_description="Old Persian (ca. 600-400 B.C.)"/>
+   <BTLanguage OID="MRC_325" m_code="per" m_description="Persian"/>
+   <BTLanguage OID="MRC_326" m_code="phi" m_description="Philippine (Other)"/>
+   <BTLanguage OID="MRC_327" m_code="phn" m_description="Phoenician"/>
+   <BTLanguage OID="MRC_328" m_code="pli" m_description="Pali"/>
+   <BTLanguage OID="MRC_329" m_code="pol" m_description="Polish"/>
+   <BTLanguage OID="MRC_330" m_code="pon" m_description="Ponape"/>
+   <BTLanguage OID="MRC_331" m_code="por" m_description="Portuguese"/>
+   <BTLanguage OID="MRC_332" m_code="pra" m_description="Prakrit languages"/>
+   <BTLanguage OID="MRC_333" m_code="pro" m_description="Provençal (to 1500)"/>
+   <BTLanguage OID="MRC_334" m_code="pus" m_description="Pushto"/>
+   <BTLanguage OID="MRC_335" m_code="que" m_description="Quechua"/>
+   <BTLanguage OID="MRC_336" m_code="raj" m_description="Rajasthani"/>
+   <BTLanguage OID="MRC_337" m_code="rap" m_description="Rapanui"/>
+   <BTLanguage OID="MRC_338" m_code="rar" m_description="Rarotongan"/>
+   <BTLanguage OID="MRC_339" m_code="roa" m_description="Romance (Other)"/>
+   <BTLanguage OID="MRC_340" m_code="roh" m_description="Raeto-Romance"/>
+   <BTLanguage OID="MRC_341" m_code="rom" m_description="Romany"/>
+   <BTLanguage OID="MRC_342" m_code="rum" m_description="Romanian"/>
+   <BTLanguage OID="MRC_343" m_code="run" m_description="Rundi"/>
+   <BTLanguage OID="MRC_344" m_code="rus" m_description="Russian"/>
+   <BTLanguage OID="MRC_345" m_code="sad" m_description="Sandawe"/>
+   <BTLanguage OID="MRC_346" m_code="sag" m_description="Sango"/>
+   <BTLanguage OID="MRC_347" m_code="sah" m_description="Yakut"/>
+   <BTLanguage OID="MRC_348" m_code="sai" m_description="South American Indian (Other)"/>
+   <BTLanguage OID="MRC_349" m_code="sal" m_description="Salishan languages"/>
+   <BTLanguage OID="MRC_350" m_code="sam" m_description="Samaritan Aramaic"/>
+   <BTLanguage OID="MRC_351" m_code="san" m_description="Sanskrit"/>
+   <BTLanguage OID="MRC_352" m_code="-sao" m_description="Samoan"/>
+   <BTLanguage OID="MRC_353" m_code="sas" m_description="Sasak"/>
+   <BTLanguage OID="MRC_354" m_code="sat" m_description="Santali"/>
+   <BTLanguage OID="MRC_355" m_code="scc" m_description="Serbian"/>
+   <BTLanguage OID="MRC_356" m_code="sco" m_description="Scots"/>
+   <BTLanguage OID="MRC_357" m_code="scr" m_description="Croatian"/>
+   <BTLanguage OID="MRC_358" m_code="sel" m_description="Selkup"/>
+   <BTLanguage OID="MRC_359" m_code="sem" m_description="Semitic (Other)"/>
+   <BTLanguage OID="MRC_360" m_code="sga" m_description="Irish, Old (to 1100)"/>
+   <BTLanguage OID="MRC_361" m_code="sgn" m_description="Sign languages"/>
+   <BTLanguage OID="MRC_362" m_code="shn" m_description="Shan"/>
+   <BTLanguage OID="MRC_363" m_code="-sho" m_description="Shona"/>
+   <BTLanguage OID="MRC_364" m_code="sid" m_description="Sidamo"/>
+   <BTLanguage OID="MRC_365" m_code="sin" m_description="Sinhalese"/>
+   <BTLanguage OID="MRC_366" m_code="sio" m_description="Siouan (Other)"/>
+   <BTLanguage OID="MRC_367" m_code="sit" m_description="Sino-Tibetan (Other)"/>
+   <BTLanguage OID="MRC_368" m_code="sla" m_description="Slavic (Other)"/>
+   <BTLanguage OID="MRC_369" m_code="slo" m_description="Slovak"/>
+   <BTLanguage OID="MRC_370" m_code="slv" m_description="Slovenian"/>
+   <BTLanguage OID="MRC_371" m_code="sme" m_description="Northern Sami"/>
+   <BTLanguage OID="MRC_372" m_code="smi" m_description="Sami"/>
+   <BTLanguage OID="MRC_373" m_code="smo" m_description="Samoan"/>
+   <BTLanguage OID="MRC_374" m_code="sna" m_description="Shona"/>
+   <BTLanguage OID="MRC_375" m_code="snd" m_description="Sindhi"/>
+   <BTLanguage OID="MRC_376" m_code="-snh" m_description="Sinhalese"/>
+   <BTLanguage OID="MRC_377" m_code="snk" m_description="Soninke"/>
+   <BTLanguage OID="MRC_378" m_code="sog" m_description="Sogdian"/>
+   <BTLanguage OID="MRC_379" m_code="som" m_description="Somali"/>
+   <BTLanguage OID="MRC_380" m_code="son" m_description="Songhai"/>
+   <BTLanguage OID="MRC_381" m_code="sot" m_description="Sotho"/>
+   <BTLanguage OID="MRC_382" m_code="spa" m_description="Spanish"/>
+   <BTLanguage OID="MRC_383" m_code="srd" m_description="Sardinian"/>
+   <BTLanguage OID="MRC_384" m_code="srr" m_description="Serer"/>
+   <BTLanguage OID="MRC_385" m_code="ssa" m_description="Nilo-Saharan (Other)"/>
+   <BTLanguage OID="MRC_386" m_code="-sso" m_description="Sotho"/>
+   <BTLanguage OID="MRC_387" m_code="ssw" m_description="Swazi"/>
+   <BTLanguage OID="MRC_388" m_code="suk" m_description="Sukuma"/>
+   <BTLanguage OID="MRC_389" m_code="sun" m_description="Sundanese"/>
+   <BTLanguage OID="MRC_390" m_code="sus" m_description="Susu"/>
+   <BTLanguage OID="MRC_391" m_code="sux" m_description="Sumerian"/>
+   <BTLanguage OID="MRC_392" m_code="swa" m_description="Swahili"/>
+   <BTLanguage OID="MRC_393" m_code="swe" m_description="Swedish"/>
+   <BTLanguage OID="MRC_394" m_code="-swz" m_description="Swazi"/>
+   <BTLanguage OID="MRC_395" m_code="syr" m_description="Syriac"/>
+   <BTLanguage OID="MRC_396" m_code="-tag" m_description="Tagalog"/>
+   <BTLanguage OID="MRC_397" m_code="tah" m_description="Tahitian"/>
+   <BTLanguage OID="MRC_398" m_code="tai" m_description="Tai (Other)"/>
+   <BTLanguage OID="MRC_399" m_code="-taj" m_description="Tajik"/>
+   <BTLanguage OID="MRC_400" m_code="tam" m_description="Tamil"/>
+   <BTLanguage OID="MRC_401" m_code="-tar" m_description="Tatar"/>
+   <BTLanguage OID="MRC_402" m_code="tat" m_description="Tatar"/>
+   <BTLanguage OID="MRC_403" m_code="tel" m_description="Telugu"/>
+   <BTLanguage OID="MRC_404" m_code="tem" m_description="Temne"/>
+   <BTLanguage OID="MRC_405" m_code="ter" m_description="Terena"/>
+   <BTLanguage OID="MRC_406" m_code="tet" m_description="Tetum"/>
+   <BTLanguage OID="MRC_407" m_code="tgk" m_description="Tajik"/>
+   <BTLanguage OID="MRC_408" m_code="tgl" m_description="Tagalog"/>
+   <BTLanguage OID="MRC_409" m_code="tha" m_description="Thai"/>
+   <BTLanguage OID="MRC_410" m_code="tib" m_description="Tibetan"/>
+   <BTLanguage OID="MRC_411" m_code="tig" m_description="Tigré"/>
+   <BTLanguage OID="MRC_412" m_code="tir" m_description="Tigrinya"/>
+   <BTLanguage OID="MRC_413" m_code="tiv" m_description="Tiv"/>
+   <BTLanguage OID="MRC_414" m_code="tkl" m_description="Tokelauan"/>
+   <BTLanguage OID="MRC_415" m_code="tli" m_description="Tlingit"/>
+   <BTLanguage OID="MRC_416" m_code="tmh" m_description="Tamashek"/>
+   <BTLanguage OID="MRC_417" m_code="tog" m_description="Tonga (Nyasa)"/>
+   <BTLanguage OID="MRC_418" m_code="ton" m_description="Tongan"/>
+   <BTLanguage OID="MRC_419" m_code="tpi" m_description="Tok Pisin"/>
+   <BTLanguage OID="MRC_420" m_code="-tru" m_description="Truk"/>
+   <BTLanguage OID="MRC_421" m_code="tsi" m_description="Tsimshian"/>
+   <BTLanguage OID="MRC_422" m_code="tsn" m_description="Tswana"/>
+   <BTLanguage OID="MRC_423" m_code="tso" m_description="Tsonga"/>
+   <BTLanguage OID="MRC_424" m_code="-tsw" m_description="Tswana"/>
+   <BTLanguage OID="MRC_425" m_code="tuk" m_description="Turkmen"/>
+   <BTLanguage OID="MRC_426" m_code="tum" m_description="Tumbuka"/>
+   <BTLanguage OID="MRC_427" m_code="tur" m_description="Turkish"/>
+   <BTLanguage OID="MRC_428" m_code="tut" m_description="Altaic (Other)"/>
+   <BTLanguage OID="MRC_429" m_code="tvl" m_description="Tuvaluan"/>
+   <BTLanguage OID="MRC_430" m_code="twi" m_description="Twi"/>
+   <BTLanguage OID="MRC_431" m_code="tyv" m_description="Tuvinian"/>
+   <BTLanguage OID="MRC_432" m_code="uga" m_description="Ugaritic"/>
+   <BTLanguage OID="MRC_433" m_code="uig" m_description="Uighur"/>
+   <BTLanguage OID="MRC_434" m_code="ukr" m_description="Ukrainian"/>
+   <BTLanguage OID="MRC_435" m_code="umb" m_description="Umbundu"/>
+   <BTLanguage OID="MRC_436" m_code="und" m_description="Undetermined"/>
+   <BTLanguage OID="MRC_437" m_code="urd" m_description="Urdu"/>
+   <BTLanguage OID="MRC_438" m_code="uzb" m_description="Uzbek"/>
+   <BTLanguage OID="MRC_439" m_code="vai" m_description="Vai"/>
+   <BTLanguage OID="MRC_440" m_code="ven" m_description="Venda"/>
+   <BTLanguage OID="MRC_441" m_code="vie" m_description="Vietnamese"/>
+   <BTLanguage OID="MRC_442" m_code="vol" m_description="Volapük"/>
+   <BTLanguage OID="MRC_443" m_code="vot" m_description="Votic"/>
+   <BTLanguage OID="MRC_444" m_code="wak" m_description="Wakashan languages"/>
+   <BTLanguage OID="MRC_445" m_code="wal" m_description="Walamo"/>
+   <BTLanguage OID="MRC_446" m_code="war" m_description="Waray"/>
+   <BTLanguage OID="MRC_447" m_code="was" m_description="Washo"/>
+   <BTLanguage OID="MRC_448" m_code="wel" m_description="Welsh"/>
+   <BTLanguage OID="MRC_449" m_code="wen" m_description="Sorbian languages"/>
+   <BTLanguage OID="MRC_450" m_code="wol" m_description="Wolof"/>
+   <BTLanguage OID="MRC_451" m_code="xho" m_description="Xhosa"/>
+   <BTLanguage OID="MRC_452" m_code="yao" m_description="Yao"/>
+   <BTLanguage OID="MRC_453" m_code="yap" m_description="Yapese"/>
+   <BTLanguage OID="MRC_454" m_code="yid" m_description="Yiddish"/>
+   <BTLanguage OID="MRC_455" m_code="yor" m_description="Yoruba"/>
+   <BTLanguage OID="MRC_456" m_code="ypk" m_description="Yupik languages"/>
+   <BTLanguage OID="MRC_457" m_code="zap" m_description="Zapotec"/>
+   <BTLanguage OID="MRC_458" m_code="zen" m_description="Zenaga"/>
+   <BTLanguage OID="MRC_459" m_code="zha" m_description="Zhuang"/>
+   <BTLanguage OID="MRC_460" m_code="znd" m_description="Zande"/>
+   <BTLanguage OID="MRC_461" m_code="zul" m_description="Zulu"/>
+   <BTLanguage OID="MRC_462" m_code="zun" m_description="Zuni"/>
+</m_language>
+</BTDatabase>
+<TRAILER />

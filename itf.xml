@@ -1,0 +1,166 @@
+<ITF_multi_state_characters>
+   <m_accsta>
+      <accsta OID="101" m_code="C" m_description="Current accession in the living collection"/>
+      <accsta OID="102" m_code="D" m_description="Non-current accession of the living collection due to death"/>
+      <accsta OID="103" m_code="T" m_description="Non-current accession due to transfer to another record system, normally of another garden"/>
+      <accsta OID="104" m_code="S" m_description="Stored in a dormant state"/>
+      <accsta OID="105" m_code="O" m_description="Other' accession status  - different from those above."/>
+   </m_accsta>
+   <m_acct>
+      <acct OID="201" m_code="P" m_description="Whole plant"/>
+      <acct OID="202" m_code="S" m_description="Seed or Spore"/>
+      <acct OID="203" m_code="V" m_description="Vegetative part"/>
+      <acct OID="204" m_code="T" m_description="Tissue culture"/>
+      <acct OID="205" m_code="O" m_description="Other"/>
+   </m_acct>
+   <m_bre>
+      <bre OID="301" m_code="M" m_description="Male"/>
+      <bre OID="302" m_code="F" m_description="Female"/>
+      <bre OID="303" m_code="B" m_description="includes both 'male' and 'female' individuals"/>
+      <bre OID="304" m_code="Q" m_description="Dioecious plant of unknown sex"/>
+      <bre OID="305" m_code="H" m_description="hermaphrodite or is monoecious"/>
+      <bre OID="306" m_code="H1" m_description="hermaphrodite or is monoecious, but self-incompatible."/>
+      <bre OID="307" m_code="A" m_description="reproduces by agamospermy"/>
+      <bre OID="308" m_code="U" m_description="Insufficient information to dedescriptionine breeding system."/>
+   </m_bre>
+   <m_dont>
+      <dont OID="401" m_code="E" m_description="Expedition"/>
+      <dont OID="402" m_code="G" m_description="Gene bank"/>
+      <dont OID="403" m_code="B" m_description="Botanic Garden or Arboretum"/>
+      <dont OID="404" m_code="R" m_description="Other research, field or experimental station"/>
+      <dont OID="405" m_code="S" m_description="Staff of the botanic garden to which record system applies"/>
+      <dont OID="406" m_code="U" m_description="University Department"/>
+      <dont OID="407" m_code="H" m_description="Horticultural Association or Garden Club"/>
+      <dont OID="408" m_code="M" m_description="Municipal department"/>
+      <dont OID="409" m_code="N" m_description="Nursery or other commercial establishment"/>
+      <dont OID="410" m_code="I" m_description="Individual"/>
+      <dont OID="411" m_code="O" m_description="Other"/>
+      <dont OID="412" m_code="U" m_description="Unknown"/>
+   </m_dont>
+   <m_hybrid>
+      <hybrid OID="501" m_code="H" m_description="A hybrid formula"/>
+      <hybrid OID="502" m_code="x" m_description="A hybrid"/>
+      <hybrid OID="503" m_code="+" m_description="A graft hybrid or graft chimaera"/>
+   </m_hybrid>
+   <m_idql>
+      <idql OID="601" m_code="aff." m_description="Akin to or bordering"/>
+      <idql OID="602" m_code="cf." m_description="Compare with"/>
+      <idql OID="603" m_code="Incorrect" m_description="Incorrect"/>
+      <idql OID="604" m_code="forsan" m_description="Perhaps"/>
+      <idql OID="605" m_code="near" m_description="Close to"/>
+      <idql OID="606" m_code="?" m_description="Questionable"/>
+   </m_idql>
+   <m_per>
+      <per OID="701" m_code="M" m_description="Monocarpic plants"/>
+      <per OID="702" m_code="MA" m_description="Annuals"/>
+      <per OID="703" m_code="MB" m_description="Biennials and short-lived perennials"/>
+      <per OID="704" m_code="ML" m_description="Long-lived monocarpic plants"/>
+      <per OID="705" m_code="P" m_description="Polycarpic plants"/>
+      <per OID="706" m_code="PD" m_description="Deciduous polycarpic plants"/>
+      <per OID="707" m_code="PE" m_description="Evergreen polycarpic plants"/>
+      <per OID="708" m_code="U" m_description="Uncertain which of the above applies."/>
+   </m_per>
+   <m_prophis>
+      <prohis OID="801" m_code="I" m_description="Individual wild plant(s)"/>
+      <prohis OID="802" m_code="S" m_description="Seeds from sexual reproduction (excluding apomixis)"/>
+      <prohis OID="803" m_code="SA" m_description="Seeds from open breeding"/>
+      <prohis OID="804" m_code="SB" m_description="Seeds from controlled breeding"/>
+      <prohis OID="805" m_code="SC" m_description="Seeds from self-pollinated isolated plants"/>
+      <prohis OID="806" m_code="V" m_description="Plant material derived asexually"/>
+      <prohis OID="807" m_code="VA" m_description="Vegetative reproduction"/>
+      <prohis OID="808" m_code="VB" m_description="Vegetative from apomictic cloning (agamospermy)"/>
+      <prohis OID="809" m_code="U" m_description="Uncertain, or no information."/>
+   </m_prophis>
+   <m_prot>
+      <prot OID="901" m_code="W" m_description="Accession of wild source"/>
+      <prot OID="902" m_code="Z" m_description="From a wild source plant in cultivation"/>
+      <prot OID="903" m_code="G" m_description="Not of wild source"/>
+      <prot OID="904" m_code="U" m_description="Unknown"/>
+   </m_prot>
+   <m_rank>
+      <BTRank OID="1001" m_sequence_number="1" m_code="regnum" m_description="Regnum"/>
+      <BTRank OID="1002" m_sequence_number="2" m_code="subregnum" m_description="Subregnum"/>
+      <BTRank OID="1003" m_sequence_number="3" m_code="division" m_description="Division"/>
+      <BTRank OID="1004" m_sequence_number="4" m_code="subdivision" m_description="Subdivision"/>
+      <BTRank OID="1005" m_sequence_number="5" m_code="class" m_description="Class"/>
+      <BTRank OID="1006" m_sequence_number="6" m_code="subclass" m_description="Subclass"/>
+      <BTRank OID="1007" m_sequence_number="7" m_code="order" m_description="Order"/>
+      <BTRank OID="1008" m_sequence_number="8" m_code="family" m_description="Family"/>
+      <BTRank OID="1009" m_sequence_number="9" m_code="subfamily" m_description="Subfamily"/>
+      <BTRank OID="1010" m_sequence_number="10" m_code="tribe" m_description="Tribe"/>
+      <BTRank OID="1011" m_sequence_number="11" m_code="subtribe" m_description="Subtribe"/>
+      <BTRank OID="1012" m_sequence_number="12" m_code="genus" m_description="Genus"/>
+      <BTRank OID="1013" m_sequence_number="13" m_code="subgenus" m_description="Subgenus"/>
+      <BTRank OID="1014" m_sequence_number="14" m_code="section" m_description="Section"/>
+      <BTRank OID="1015" m_sequence_number="15" m_code="subsect." m_description="Subsection"/>
+      <BTRank OID="1016" m_sequence_number="16" m_code="series" m_description="Series"/>
+      <BTRank OID="1017" m_sequence_number="17" m_code="subser." m_description="Subseries"/>
+      <BTRank OID="1018" m_sequence_number="18" m_code="species" m_description="Species"/>
+      <BTRank OID="1019" m_sequence_number="19" m_code="nss" m_description="Nothosubspecies"/>
+      <BTRank OID="1020" m_sequence_number="20" m_code="subsp." m_description="Subspecies"/>
+      <BTRank OID="1021" m_sequence_number="21" m_code="convar." m_description="Convariety"/>
+      <BTRank OID="1022" m_sequence_number="22" m_code="var." m_description="Variety"/>
+      <BTRank OID="1023" m_sequence_number="23" m_code="nva" m_description="Nothovariety"/>
+      <BTRank OID="1024" m_sequence_number="24" m_code="subvar." m_description="Subvariety"/>
+      <BTRank OID="1025" m_sequence_number="25" m_code="f." m_description="Form"/>
+      <BTRank OID="1026" m_sequence_number="26" m_code="subf." m_description="Subform"/>
+      <BTRank OID="1027" m_sequence_number="27" m_code="nfo" m_description="Nothoform"/>
+      <BTRank OID="1028" m_sequence_number="28" m_code="sxss" m_description="Hybrid between subsp."/>
+      <BTRank OID="1029" m_sequence_number="29" m_code="ssxva" m_description="Hybrid subsp. x var."/>
+      <BTRank OID="1030" m_sequence_number="30" m_code="ssxfo" m_description="Hybrid subsp. x f."/>
+      <BTRank OID="1031" m_sequence_number="31" m_code="vaxsf" m_description="Hybrid var. x subf."/>
+   </m_rank>
+   <m_rkql>
+      <rkql OID="1101" m_code="B" m_description="Below Family"/>
+      <rkql OID="1102" m_code="F" m_description="Family"/>
+      <rkql OID="1103" m_code="G" m_description="Genus"/>
+      <rkql OID="1104" m_code="S" m_description="Species"/>
+      <rkql OID="1105" m_code="I" m_description="first Infraspecific Epithet"/>
+      <rkql OID="1106" m_code="J" m_description="second Infraspecific Epithet (new for ITF2)"/>
+      <rkql OID="1107" m_code="C" m_description="Cultivar"/>
+   </m_rkql>
+   <m_spql>
+      <spql OID="1201" m_code="agg." m_description="An aggregate species"/>
+      <spql OID="1202" m_code="s.lat." m_description="aggregrate species (sensu lato)"/>
+      <spql OID="1203" m_code="s.str." m_description="segregate species (sensu stricto)"/>
+   </m_spql>
+   <m_vlev>
+      <vlev OID="1301" m_code="U" m_description="unknown if the name has been checked"/>
+      <vlev OID="1302" m_code="0" m_description="not been dedescriptionined by any authority"/>
+      <vlev OID="1303" m_code="1" m_description="dedescriptionined by comparison with other named plants"/>
+      <vlev OID="1304" m_code="2" m_description="dedescriptionined by a taxonomist or other competent person"/>
+      <vlev OID="1305" m_code="3" m_description="dedescriptionined by a specialist (taxonomist)"/>
+      <vlev OID="1306" m_code="4" m_description="plant represents all or part of the type material (wrong position in ITF)"/>
+   </m_vlev>
+   <m_wpst>
+      <wpst OID="1401" m_code="Wild native" m_description="Endemic found within its indigenous range"/>
+      <wpst OID="1402" m_code="Wild non-native" m_description="Plant found outside its indigenous range"/>
+      <wpst OID="1403" m_code="Cultivated native" m_description="Endemic known to have been cultivated and reintroduced or translocated within its indigenous range."/>
+      <wpst OID="1404" m_code="Cultivated non-native" m_description="Plant known to be cultivated and found outside its indigenous range."/>
+   </m_wpst>
+   <m_taxon_use>
+      <BTTaxonUse OID="1501" m_description="fruit trees and their wild relatives"/>
+      <BTTaxonUse OID="1502" m_description="crop plants from several regions of the world, such as cereals"/>
+      <BTTaxonUse OID="1503" m_description="species of value for amenity horticulture or as ornamentals"/>
+      <BTTaxonUse OID="1504" m_description="textile plants"/>
+      <BTTaxonUse OID="1505" m_description="oil plants"/>
+      <BTTaxonUse OID="1506" m_description="timbers"/>
+      <BTTaxonUse OID="1507" m_description="cork"/>
+      <BTTaxonUse OID="1508" m_description="resin yielding plants"/>
+      <BTTaxonUse OID="1509" m_description="plants used for industrial production"/>
+      <BTTaxonUse OID="1510" m_description="grasses, and forage plants"/>
+      <BTTaxonUse OID="1511" m_description="wild relatives of crops"/>
+      <BTTaxonUse OID="1512" m_description="underutilized or neglected crops"/>
+      <BTTaxonUse OID="1513" m_description="local and traditional economic plant varieties and land races"/>
+      <BTTaxonUse OID="1514" m_description="medicinal plants"/>
+      <BTTaxonUse OID="1515" m_description="plants that are important for local uses (e.g. for basket making, for tools used in cooking, fishing and agriculture)"/>
+      <BTTaxonUse OID="1516" m_description="perfume, essential oil and cosmetic plants"/>
+      <BTTaxonUse OID="1517" m_description="spice and flavouring plants"/>
+      <BTTaxonUse OID="1518" m_description="melifluous species"/>
+      <BTTaxonUse OID="1519" m_description="dyeing and tanning"/>
+      <BTTaxonUse OID="1520" m_description="plants for bonsai"/>
+      <BTTaxonUse OID="1521" m_description="systematic collections of important eceonomic plant groups such as conifers or legumes"/>
+      <BTTaxonUse OID="1522" m_description="temperate and tropical timber trees"/>
+      <BTTaxonUse OID="1523" m_description="ornamental trees"/>
+   </m_taxon_use>
+</ITF_multi_state_characters>

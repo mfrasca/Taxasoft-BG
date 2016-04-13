@@ -1,0 +1,423 @@
+<code_lists>
+
+<m_itf_accsta>
+	<itf_accsta OID="ITF1_1" m_code="C"
+		 m_description="Current accession in the living collection">
+	</itf_accsta>
+	<itf_accsta OID="ITF1_2" m_code="D"
+		 m_description="Non-current accession of the living collection due to death">
+	</itf_accsta>
+	<itf_accsta OID="ITF1_3" m_code="T"
+		 m_description="Non-current accession due to transfer to another record system, normally of another garden">
+	</itf_accsta>
+	<itf_accsta OID="ITF1_4" m_code="S"
+		 m_description="Stored in a dormant state">
+	</itf_accsta>
+	<itf_accsta OID="ITF1_5" m_code="O"
+		 m_description="Other' accession status  - different from those above.">
+	</itf_accsta>
+</m_itf_accsta>
+
+
+<m_itf_acct>
+	<itf_acct OID="ITF2_1" m_code="P"
+		 m_description="Whole plant">
+	</itf_acct>
+	<itf_acct OID="ITF2_2" m_code="S"
+		 m_description="Seed or Spore">
+	</itf_acct>
+	<itf_acct OID="ITF2_3" m_code="V"
+		 m_description="Vegetative part">
+	</itf_acct>
+	<itf_acct OID="ITF2_4" m_code="T"
+		 m_description="Tissue culture">
+	</itf_acct>
+	<itf_acct OID="ITF2_5" m_code="O"
+		 m_description="Other">
+	</itf_acct>
+</m_itf_acct>
+
+
+<m_itf_bre>
+	<itf_bre OID="ITF3_1" m_code="M"
+		 m_description="'Male', defined as plants that do not produce functional female flowers">
+	</itf_bre>
+	<itf_bre OID="ITF3_2" m_code="F"
+		 m_description="'Female', defined as plants that do not produce functional male flowers">
+	</itf_bre>
+	<itf_bre OID="ITF3_3" m_code="B"
+		 m_description="The accession includes both 'male' and 'female' individuals as described above">
+	</itf_bre>
+	<itf_bre OID="ITF3_4" m_code="Q"
+		 m_description="Dioecious plant of unknown sex">
+	</itf_bre>
+	<itf_bre OID="ITF3_5" m_code="H"
+		 m_description="The accession reproduces sexually, and possesses hermaphrodite flowers or is monoecious">
+	</itf_bre>
+	<itf_bre OID="ITF3_6" m_code="H1"
+		 m_description="The accession reproduces sexually, and possesses hermaphrodite flowers or is monoecious, but is known to be self-incompatible.">
+	</itf_bre>
+	<itf_bre OID="ITF3_7" m_code="A"
+		 m_description="The accession reproduces by agamospermy">
+	</itf_bre>
+	<itf_bre OID="ITF3_8" m_code="U"
+		 m_description="Insufficient information to determine breeding system.">
+	</itf_bre>
+</m_itf_bre>
+
+
+<m_itf_dont>
+	<itf_dont OID="ITF4_1" m_code="E"
+		 m_description="Expedition">
+	</itf_dont>
+	<itf_dont OID="ITF4_2" m_code="G"
+		 m_description="Gene bank">
+	</itf_dont>
+	<itf_dont OID="ITF4_3" m_code="B"
+		 m_description="Botanic Garden or Arboretum">
+	</itf_dont>
+	<itf_dont OID="ITF4_4" m_code="R"
+		 m_description="Other research, field or experimental station">
+	</itf_dont>
+	<itf_dont OID="ITF4_5" m_code="S"
+		 m_description="Staff of the botanic garden to which record system applies">
+	</itf_dont>
+	<itf_dont OID="ITF4_6" m_code="U"
+		 m_description="University Department">
+	</itf_dont>
+	<itf_dont OID="ITF4_7" m_code="H"
+		 m_description="Horticultural Association or Garden Club">
+	</itf_dont>
+	<itf_dont OID="ITF4_8" m_code="M"
+		 m_description="Municipal department">
+	</itf_dont>
+	<itf_dont OID="ITF4_9" m_code="N"
+		 m_description="Nursery or other commercial establishment">
+	</itf_dont>
+	<itf_dont OID="ITF4_10" m_code="I"
+		 m_description="Individual">
+	</itf_dont>
+	<itf_dont OID="ITF4_11" m_code="O"
+		 m_description="Other">
+	</itf_dont>
+	<itf_dont OID="ITF4_12" m_code="U"
+		 m_description="Unknown">
+	</itf_dont>
+</m_itf_dont>
+
+
+<m_itf_hybrid>
+	<itf_hybrid OID="ITF5_1" m_code="H"
+		 m_description="A hybrid formula">
+	</itf_hybrid>
+	<itf_hybrid OID="ITF5_2" m_code="x"
+		 m_description="A hybrid">
+	</itf_hybrid>
+	<itf_hybrid OID="ITF5_3" m_code="+"
+		 m_description="A graft hybrid or graft chimaera">
+	</itf_hybrid>
+</m_itf_hybrid>
+
+
+<m_itf_idql>
+	<itf_idql OID="ITF6_1" m_code="aff."
+		 m_description="Akin to or bordering">
+	</itf_idql>
+	<itf_idql OID="ITF6_2" m_code="cf."
+		 m_description="Compare with">
+	</itf_idql>
+	<itf_idql OID="ITF6_3" m_code="Incorrect"
+		 m_description="Incorrect">
+	</itf_idql>
+	<itf_idql OID="ITF6_4" m_code="forsan"
+		 m_description="Perhaps">
+	</itf_idql>
+	<itf_idql OID="ITF6_5" m_code="near"
+		 m_description="Close to">
+	</itf_idql>
+	<itf_idql OID="ITF6_6" m_code="?"
+		 m_description="Questionable">
+	</itf_idql>
+</m_itf_idql>
+
+
+<m_itf_per>
+	<itf_per OID="ITF7_1" m_code="M"
+		 m_description="Monocarpic plants">
+	</itf_per>
+	<itf_per OID="ITF7_2" m_code="MA"
+		 m_description="Annuals">
+	</itf_per>
+	<itf_per OID="ITF7_3" m_code="MB"
+		 m_description="Biennials and short-lived perennials">
+	</itf_per>
+	<itf_per OID="ITF7_4" m_code="ML"
+		 m_description="Long-lived monocarpic plants">
+	</itf_per>
+	<itf_per OID="ITF7_5" m_code="P"
+		 m_description="Polycarpic plants">
+	</itf_per>
+	<itf_per OID="ITF7_6" m_code="PD"
+		 m_description="Deciduous polycarpic plants">
+	</itf_per>
+	<itf_per OID="ITF7_7" m_code="PE"
+		 m_description="Evergreen polycarpic plants">
+	</itf_per>
+	<itf_per OID="ITF7_8" m_code="U"
+		 m_description="Uncertain which of the above applies.">
+	</itf_per>
+</m_itf_per>
+
+
+<m_itf_prophis>
+	<itf_prohis OID="ITF8_1" m_code="I"
+		 m_description="Individual wild plant(s)">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_2" m_code="S"
+		 m_description="Plant material arising from sexual reproduction (excluding apomixis)">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_3" m_code="SA"
+		 m_description="From open breeding">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_4" m_code="SB"
+		 m_description="From controlled breeding">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_5" m_code="SC"
+		 m_description="From plants that are isolated and definitely self-pollinated">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_6" m_code="V"
+		 m_description="Plant material derived asexually">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_7" m_code="VA"
+		 m_description="From vegetative reproduction">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_8" m_code="VB"
+		 m_description="From apomictic cloning (agamospermy)">
+	</itf_prohis>
+	<itf_prohis OID="ITF8_9" m_code="U"
+		 m_description="Propagation history uncertain, or no information.">
+	</itf_prohis>
+</m_itf_prophis>
+
+
+<m_itf_prot>
+	<itf_prot OID="ITF9_1" m_code="W"
+		 m_description="Accession of wild source">
+	</itf_prot>
+	<itf_prot OID="ITF9_2" m_code="Z"
+		 m_description="Propagule(s) from a wild source plant in cultivation">
+	</itf_prot>
+	<itf_prot OID="ITF9_3" m_code="G"
+		 m_description="Accession not of wild source">
+	</itf_prot>
+	<itf_prot OID="ITF9_4" m_code="U"
+		 m_description="Insufficient data to determine which of the above categories apply">
+	</itf_prot>
+</m_itf_prot>
+
+
+<m_rank>
+	<rank OID="ITF10_1" m_sequence_number="1"
+		 m_code="regnum"
+		 m_description="Regnum">
+	</rank>
+	<rank OID="ITF10_2" m_sequence_number="2"
+		 m_code="subregnum"
+		 m_description="Subregnum">
+	</rank>
+	<rank OID="ITF10_3" m_sequence_number="3"
+		 m_code="division"
+		 m_description="Division">
+	</rank>
+	<rank OID="ITF10_4" m_sequence_number="4"
+		 m_code="subdivision"
+		 m_description="Subdivision">
+	</rank>
+	<rank OID="ITF10_5" m_sequence_number="5"
+		 m_code="class"
+		 m_description="Class">
+	</rank>
+	<rank OID="ITF10_6" m_sequence_number="6"
+		 m_code="subclass"
+		 m_description="Subclass">
+	</rank>
+	<rank OID="ITF10_7" m_sequence_number="7"
+		 m_code="order"
+		 m_description="Order">
+	</rank>
+	<rank OID="ITF10_8" m_sequence_number="8"
+		 m_code="family"
+		 m_description="Family">
+	</rank>
+	<rank OID="ITF10_9" m_sequence_number="9"
+		 m_code="subfamily"
+		 m_description="Subfamily">
+	</rank>
+	<rank OID="ITF10_10" m_sequence_number="10"
+		 m_code="tribe"
+		 m_description="Tribe">
+	</rank>
+	<rank OID="ITF10_11" m_sequence_number="11"
+		 m_code="subtribe"
+		 m_description="Subtribe">
+	</rank>
+	<rank OID="ITF10_12" m_sequence_number="12"
+		 m_code="genus"
+		 m_description="Genus">
+	</rank>
+	<rank OID="ITF10_13" m_sequence_number="13"
+		 m_code="subgenus"
+		 m_description="Subgenus">
+	</rank>
+	<rank OID="ITF10_14" m_sequence_number="14"
+		 m_code="section"
+		 m_description="Section">
+	</rank>
+	<rank OID="ITF10_15" m_sequence_number="15"
+		 m_code="subsect."
+		 m_description="Subsection">
+	</rank>
+	<rank OID="ITF10_16" m_sequence_number="16"
+		 m_code="series"
+		 m_description="Series">
+	</rank>
+	<rank OID="ITF10_17" m_sequence_number="17"
+		 m_code="subser."
+		 m_description="Subseries">
+	</rank>
+	<rank OID="ITF10_18" m_sequence_number="18"
+		 m_code="species"
+		 m_description="Species">
+	</rank>
+	<rank OID="ITF10_19" m_sequence_number="19"
+		 m_code="nss"
+		 m_description="Nothosubspecies">
+	</rank>
+	<rank OID="ITF10_20" m_sequence_number="20"
+		 m_code="subsp."
+		 m_description="Subspecies">
+	</rank>
+	<rank OID="ITF10_21" m_sequence_number="21"
+		 m_code="convar."
+		 m_description="Convariety">
+	</rank>
+	<rank OID="ITF10_22" m_sequence_number="22"
+		 m_code="var."
+		 m_description="Variety">
+	</rank>
+	<rank OID="ITF10_23" m_sequence_number="23"
+		 m_code="nva"
+		 m_description="Nothovariety">
+	</rank>
+	<rank OID="ITF10_24" m_sequence_number="24"
+		 m_code="subvar."
+		 m_description="Subvariety">
+	</rank>
+	<rank OID="ITF10_25" m_sequence_number="25"
+		 m_code="f."
+		 m_description="Form">
+	</rank>
+	<rank OID="ITF10_26" m_sequence_number="26"
+		 m_code="subf."
+		 m_description="Subform">
+	</rank>
+	<rank OID="ITF10_27" m_sequence_number="27"
+		 m_code="nfo"
+		 m_description="Nothoform">
+	</rank>
+	<rank OID="ITF10_28" m_sequence_number="28"
+		 m_code="sxss"
+		 m_description="Hybrid between subsp.">
+	</rank>
+	<rank OID="ITF10_29" m_sequence_number="29"
+		 m_code="ssxva"
+		 m_description="Hybrid subsp. x var.">
+	</rank>
+	<rank OID="ITF10_30" m_sequence_number="30"
+		 m_code="ssxfo"
+		 m_description="Hybrid subsp. x f.">
+	</rank>
+	<rank OID="ITF10_31" m_sequence_number="31"
+		 m_code="vaxsf"
+		 m_description="Hybrid var. x subf.">
+	</rank>
+</m_rank>
+
+
+<m_itf_rkql>
+	<itf_rkql OID="ITF11_1" m_code="B"
+		 m_description="Below Family">
+	</itf_rkql>
+	<itf_rkql OID="ITF11_2" m_code="F"
+		 m_description="Family">
+	</itf_rkql>
+	<itf_rkql OID="ITF11_3" m_code="G"
+		 m_description="Genus">
+	</itf_rkql>
+	<itf_rkql OID="ITF11_4" m_code="S"
+		 m_description="Species">
+	</itf_rkql>
+	<itf_rkql OID="ITF11_5" m_code="I"
+		 m_description="first Infraspecific Epithet">
+	</itf_rkql>
+	<itf_rkql OID="ITF11_6" m_code="J"
+		 m_description="second Infraspecific Epithet (new for ITF2)">
+	</itf_rkql>
+	<itf_rkql OID="ITF11_7" m_code="C"
+		 m_description="Cultivar">
+	</itf_rkql>
+</m_itf_rkql>
+
+
+<m_itf_spql>
+	<itf_spql OID="ITF12_1" m_code="agg."
+		 m_description="An aggregate species">
+	</itf_spql>
+	<itf_spql OID="ITF12_2" m_code="s.lat."
+		 m_description="aggregrate species (sensu lato)">
+	</itf_spql>
+	<itf_spql OID="ITF12_3" m_code="s.str."
+		 m_description="segregate species (sensu stricto)">
+	</itf_spql>
+</m_itf_spql>
+
+
+<m_itf_vlev>
+	<itf_vlev OID="ITF13_1" m_code="U"
+		 m_description="It is not known if the name of the plant has been checked by an authority.">
+	</itf_vlev>
+	<itf_vlev OID="ITF13_2" m_code="0"
+		 m_description="The name of the plant has not been determined by any authority">
+	</itf_vlev>
+	<itf_vlev OID="ITF13_3" m_code="1"
+		 m_description="The name of the plant has been determined by comparison with other named plants">
+	</itf_vlev>
+	<itf_vlev OID="ITF13_4" m_code="2"
+		 m_description="The name of the plant has been determined by a taxonomist or other competent person using the facilities of a library and/or herbarium, or other documented living material">
+	</itf_vlev>
+	<itf_vlev OID="ITF13_5" m_code="3"
+		 m_description="The name of the plant has been determined by a taxonomist who is currently or has been recently involved in a revision of the family or genus">
+	</itf_vlev>
+	<itf_vlev OID="ITF13_6" m_code="4"
+		 m_description="The plant represents all or part of the type material on which the name was based, or the plant has been derived therefore by asexual propagation">
+	</itf_vlev>
+</m_itf_vlev>
+
+
+<m_itf_wpst>
+	<itf_wpst OID="ITF14_1" m_code="Wild native"
+		 m_description="Endemic found within its indigenous range">
+	</itf_wpst>
+	<itf_wpst OID="ITF14_2" m_code="Wild non-native"
+		 m_description="Plant found outside its indigenous range">
+	</itf_wpst>
+	<itf_wpst OID="ITF14_3" m_code="Cultivated native"
+		 m_description="Endemic known to have been cultivated and reintroduced or translocated within its indigenous range.">
+	</itf_wpst>
+	<itf_wpst OID="ITF14_4" m_code="Cultivated non-native"
+		 m_description="Plant known to be cultivated and found outside its indigenous range.">
+	</itf_wpst>
+</m_itf_wpst>
+
+
+</code_lists>

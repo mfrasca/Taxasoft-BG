@@ -18,3 +18,5 @@ Most functionality is build into a special include file and if features
 - Field functions
 - Reports
 
+The Database created is just a start and can be opened by: index1.php?dBase=taxasoftbg
+It is a nearly empty database for a start.

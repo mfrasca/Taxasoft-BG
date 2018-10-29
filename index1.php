@@ -6,13 +6,13 @@ $cfgHost= 'localhost';
 include('guest.pass.php');
 include('index1Form.php');
 
-    $sort= $find= $start= $combine= '';
-    $user= FALSE;
-    $debug= getRequestIsset('debug');
+    $sort = $find= $start= $combine= '';
+    $user = FALSE;
+    $debug = getRequestIsset('debug');
     $dbase = strtolower( getRequestIsset('dBase'));
 
-    if( is_dir( $dbase))
-        $dbase.= '/default';
+    if( is_dir($dbase))
+        $dbase .= '/default';
 
     if( !$dbase && file_exists('default.xml') )
         $dbase = 'default';
@@ -28,20 +28,17 @@ include('index1Form.php');
     if( $cfg['include'] != '')
         include_once( $cfg['include']);
 
-    if( isset( $_GET['tableName'])    )    //* find record by table name
-    {
-        foreach( $cfg->table as $table)
-        {
-            if( $table['name'] == $_GET['tableName'] )
-            {
+    //* find record by table name
+    if( isset( $_GET['tableName'])    ) {
+        foreach( $cfg->table as $table) {
+            if( $table['name'] == $_GET['tableName'] ) {
                 writeLog( "Search table number by name found {$table['name']}={$table['nr']}", 0);
                 $tableNr= (int)$table['nr'];
                 break;
             }
         }
     }
-    else
-    {
+    else {
         if( isset( $_REQUEST['tableNr']) )
             $tableNr= (int)getRequestIsset('tableNr');
         else if( isset($cfg['defaultTableNr']) )
@@ -52,24 +49,22 @@ include('index1Form.php');
 
     $tableName= $cfg->table[$tableNr]['name'];
 
-    if( isset( $_GET['lines']) )    //** overule list lines settings     **//
-    {
+    //** overule list lines settings     **//
+    if( isset( $_GET['lines']) ) {
         setcookie("lines", $_GET['lines']);
         $listLines = (int)$_GET['lines'];
     }
 
-    if( $cfg['site'] && !isset( $_GET['noheader']) )
-    {
+    if( $cfg['site'] && !isset( $_GET['noheader']) ) {
         include( 'siteLayout.php');
         echo "
       <div id='content'>\n";
     }
-    else if( !isset( $_GET['noheader']) )
-    {
+    else if( !isset( $_GET['noheader']) ) {
         $iconLink= $cfg['shortcutIcon'] ? "<link REL='SHORTCUT ICON' HREF='{$cfg['shortcutIcon']}'>" : '';
         $title= isset( $_GET['id']) ? $tableName.' '.$_GET['id'] : $tableName;
 
-        echo "
+        echo "\
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 

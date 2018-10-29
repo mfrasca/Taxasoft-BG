@@ -262,7 +262,7 @@ include('index1Form.php');
 			$passwordTxt= isset( $cfg['passwordTxt']) ? $cfg['passwordTxt'] : 'Password: ';
 
 			die( "<h2>{$cfg['forceLogin']} '$dbase'<br>
-				<small>© Eric J. Gouda MySQL Database Interface</small> </h2>
+				<small>Â© Eric J. Gouda MySQL Database Interface</small> </h2>
 				<p class='error'>$passError ($atempt)</p>
 				<form method='post' action='?' enctype='multipart/form-data'>
 					<table>
@@ -1223,11 +1223,11 @@ function correct( $action)
 
 
 				$coll_nbr= trim(array_pop( $array), ', ');
-				$query= "UPDATE $table SET coll_prim='".str_replace( "Ú", "é", implode( ' ', $array)) .
+				$query= "UPDATE $table SET coll_prim='".str_replace( "Ãš", "Ã©", implode( ' ', $array)) .
 					"', coll_nbr='".$coll_nbr."', coll_date='$coll_date' WHERE id='".$row['id']."'";
 			}
 			else
-				$query= "UPDATE $table SET coll_prim='".str_replace( "Ú", "é", implode( ' ', $array) ).
+				$query= "UPDATE $table SET coll_prim='".str_replace( "Ãš", "Ã©", implode( ' ', $array) ).
 					"', coll_nbr='$coll_nbr' WHERE id='".$row['id']."'";
 
 			if( (int)$coll_nbr < 1)
@@ -1606,7 +1606,7 @@ function versionInfo()
 	global $dbase, $user, $cfg;
 
 	die( "
-			<h2>© Eric J. Gouda MySQL Database Interface</h2>
+			<h2>Â© Eric J. Gouda MySQL Database Interface</h2>
 			<table class=''>
 			<tr><td colspan='3'><b>Involved files</b> (time and date updated) <font color='green'>Version 2.1.2</font></td></tr>
 			<tr><td>index1.php</td><td>Main</td><td class='bold'>".date("d-m-Y H:i:s", filemtime( 'index1.php'))."</td></tr>

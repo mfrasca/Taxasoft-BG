@@ -25,12 +25,13 @@ function writeEditForm( $id, $row)
 
 	// ****** EDIT RECORD FORMULIER ***** //
 
+	$sortRadio= $action == 'advanced' ? "<input type='radio' name='sort' value='id'>Sort Button" : "";
 	echo "
-		<form method='post' action='{$_SERVER['PHP_SELF']}?dBase=$dbase&amp;find=$find' enctype='multipart/form-data'>
+		<form method='post' action='?dBase=$dbase&amp;find=$find' enctype='multipart/form-data'>
 		<table class='edit'>
 		<tr>
 			<td>
-				<b>#$id</b>
+				<b>#$id</b> $sortRadio
 			</td>
 			<td colspan='0'>";	//*  Note: colspan="0" tells the browser to span the cell to the last column of the column group (colgroup)
 
@@ -44,21 +45,50 @@ function writeEditForm( $id, $row)
 
 	if( $load= $cfg->table[$tableNr]->load)
 	{
-		$path= $cfg['imageRoot'].$row["{$load['path']}"].$row["{$load['field']}"];
 		echoDebug("This is a load record<br>");
+		$path= $cfg['imageRoot'].$row["{$load['path']}"].$row["{$load['field']}"];
+		$title= '';
 
-		if( strpos( strtolower( $path), '.jpg') && file_exists( $path) )
+		if( strpos( strtolower( $path), '.jpg'))
+		{
+			$array=  @exif_read_data( $path);
+			$view= array('FileSize','ExifImageLength','ExifImageWidth','Model','Orientation',
+					'DateTime','ExposureTime','FNumber','Flash','FocalLength','WhiteBalance');
+
+			foreach( $array as $field => $value)
+			{
+				if( in_array( $field, $view))
+				{
+					if( strpos( $value, '/') )
+					{
+						$va= explode('/', $value);
+
+						if( $va[1] > 0 && round( $va[0]/$va[1], 2) >= 1)
+							$value= round( $va[0]/$va[1], 2);
+					}
+
+					if( $field == 'FileSize')
+						$value= round( $value/1000, 0);
+
+					$title.= "$field: $value\n";
+				}
+			}
+		}
+
+		if( (strpos( strtolower( $path), '.jpg') || strpos( strtolower( $path), '.jpeg')) && file_exists( $path) )
 			echo "
 					<font color='red'><b>&nbsp;$message</b></font>
 				</td>
 				<td rowspan='{$load['rowspan']}'>
-					<a target='_blank' href='$path'><img alt='{$load['field']}' src='index1showImage.php?db={$cfg['name']}&table=$tableName&field={$load['field']}&id=$id&width={$load['width']}'></a>
+					<a target='_blank' title='$title' href='index1showImage.php?db={$cfg['name']}&imageRoot={$cfg['imageRoot']}&table=$tableName&field={$load['field']}&id=$id&width='>
+						<img alt='{$load['field']}' src='index1showImage.php?db={$cfg['name']}&imageRoot={$cfg['imageRoot']}&table=$tableName&field={$load['field']}&id=$id&width={$load['width']}'>
+					</a>
 				</td>
 			</tr>\n";
 		else
 		{
 			if( strpos( strtolower( $path), '.jpg'))
-				writeLog( "Error URL file not found: $path", 0);
+				writeLog( "Error URL file not found (check cfg[imageRoot]): $path", 0);
 
 			echoDebug("But file '$path' does not excist or is not .jpg file<br>");
 
@@ -85,6 +115,20 @@ function writeEditForm( $id, $row)
 		if( isset( $field['hidden']))
 			continue;
 
+		$adjust= '';
+
+		if( $field['spaces'])	//* set spaces adjustment
+		{
+
+			if( $sp= (int)$field['spaces'])
+			{
+				while( $sp--)
+					$adjust.= '&nbsp;';
+			}
+			else
+				$adjust= str_replace( ' ', '&nbsp;', $field['spaces']);
+		}
+
 		$fieldName= $field['name'];
 		$notByValue= false;
 		$showFieldNameAs= isset($field['showAs']) ? $field['showAs'] : str_replace('_', ' ', $fieldName);
@@ -94,7 +138,7 @@ function writeEditForm( $id, $row)
 		$fieldType= $field['type'];
 		$fieldAddLink= $field['addLink'] ? " <a href='?dBase=$dbase&amp;action=edit&amp;function={$field['href']}&amp;id={$row['id']}'>{$field['addLink']}</a> &nbsp;" : '';
 		$fieldExplain= $field['explain'];
-		$fieldTableNr= false;
+		$fieldTableNr= (int)$field['tableNr'];
 		$fieldValue= isset( $row["$fieldName"]) ?
 			str_replace('"', "&quot;", stripslashes( $row["$fieldName"]) ) : 	//** replace double quotes otherwise you lose part of the data in that field
 			($field['default'] ? $field['default'] : '');
@@ -102,6 +146,7 @@ function writeEditForm( $id, $row)
 		$onclick= $field['onclick'] == 'submit' ? "onclick='this.form.submit();'" : '';
 //			$maxLength= getMySQLfieldLength( $fieldName, $tableName);
 
+		$sortRadio= $action == 'advanced' ? "<input type='radio' name='sort' value='$fieldName'>" : "";
 
 		if( $fieldLen > $maxFieldLen)
 			$len= $maxFieldLen;
@@ -128,15 +173,15 @@ function writeEditForm( $id, $row)
 		if( $fieldType == 'text')
 			echo "
 				<tr>
-					<td valign='top'>$showFieldNameAs</td>
+					<td valign='top'>$showFieldNameAs$sortRadio</td>
 					<td><textarea cols='$fieldLen' rows='$fieldHig' NAME='$fieldName'>$fieldValue</textarea>&nbsp;</td>
 				</tr>";
 		else if( $fieldType == 'file')
-			echo '
+			echo "
 				<tr>
-					<td valign="top">'.$showFieldNameAs.'</td>
-					<td><input size="'.$len.'" maxlength="'.$maxLength.'" name="'.$fieldName.'" value="'.$fieldValue.'" type="file">&nbsp;'.$ref.$fieldExplain.$fieldAddLink.'</td>
-				</tr>';
+					<td valign='top'>$showFieldNameAs</td>
+					<td><input size='$len' maxlength='$maxLength' name='$fieldName' value='$fieldValue' type='file'>&nbsp;$ref $fieldExplain $fieldAddLink</td>
+				</tr>";
 		else if( $fieldType == 'radio' || $fieldLen == 1)	//** this is a radio button yes/no for BOOL field len=1 	**//
 		{
 			if( $combine == 'START' || $combine == 'NONE')
@@ -150,10 +195,7 @@ function writeEditForm( $id, $row)
 				if( $showFieldNameAs != '')
 					$showFieldNameAs.= ':';
 
-				if( $field['spaces'])
-					echo str_replace( ' ', '&nbsp;', $field['spaces']).$showFieldNameAs;
-				else
-					echo $showFieldNameAs;
+				echo $adjust.$showFieldNameAs;
 			}
 
 			if( $field['choices'])
@@ -193,20 +235,13 @@ function writeEditForm( $id, $row)
 			// **
 			if( $fieldType == 'select')
 			{
-				if( $field['select'])
-				{
-//					echoDebug( "Create Selection list for field($fieldName) use({$field['select']}), value: '".$row[ "$fieldName" ]."'<br>");
-					$array= array();
+				$array= array();
 
-					if( $field['byValue'])
-						$array= getDbItem( $cfg->$field['select'], $byValue=TRUE);
-					else
-						$array= getDbItem( $cfg->$field['select'], $byValue=FALSE);
-				}
+				if( $field['select'])
+					$array= getDbItem( $cfg, $field['select']);
 				else if( $field['choices'])
 				{
 					echoDebug( "Create Selection list for field($fieldName) use({$field['choices']}), value: '".$row[ "$fieldName" ]."'<br>");
-					$array= array();
 					$tmp= explode( ',' , $field['choices']);
 
 					foreach( $tmp as $choice)
@@ -214,9 +249,7 @@ function writeEditForm( $id, $row)
 				}
 				else if( isset( $field['tableNr']))
 				{
-					$fieldTableNr= (int)$field['tableNr'];
 					createTableIfNotExists( (int)$field['tableNr']);
-//					echoDebug( "Create Selection list for field($fieldName) from table({$field['tableNr']}), value: '".$row[ "$fieldName" ]."'<br>");
 
 					if( $field['noEdit'])
 						$fieldValueRef= getReference( (int)$field['tableNr'], 'id', $fieldValue);
@@ -224,7 +257,6 @@ function writeEditForm( $id, $row)
 						die("<p class='error'><b>Config Error</b> in field '<b>$fieldName</b>', reference to table not correct</p>");
 					else
 					{
-						$array= array();
 						$refFieldArray= explode( ',', $cfg->table[$fieldTableNr]['reference']);
 						$refFields= $cfg->table[$fieldTableNr]['reference'];
 						$refDelim= $cfg->table[$fieldTableNr]['referenceDelimiter'] or $refDelim= ' ';
@@ -258,32 +290,36 @@ function writeEditForm( $id, $row)
 								"` ORDER BY $refFields";
 
 						echoDebug( "Make selection array: $query<br>");
-						$sResult = mysql_query( $query)
-							or die("<br>Select error on line 686<br>".$query."<br><br>".mysql_error());
-
+						$sResult = query( $query, 'IF 293');
 						$tableNrSelectFields= getTableNrSelectFields( $fieldTableNr);
+						$maxSelectItems= (int)$cfg['maxSelectItems'] ? (int)$cfg['maxSelectItems'] : 15000;
 
-						while( $sRow = mysql_fetch_array($sResult) )
+						if( mysqli_num_rows( $sResult) > $maxSelectItems)
+							echo "<font color='red'>too many (>$maxSelectItems) records for select $fieldName (set maxSelectItems)</font>";
+						else
 						{
-							foreach( $refFieldArray as $refField)
+							while( $sRow = mysqli_fetch_array($sResult) )
 							{
-								$refField= trim( $refField);
+								foreach( $refFieldArray as $refField)
+								{
+									$refField= trim( $refField);
 
-								if( isset( $tableNrSelectFields["$refField"]))					//* if this is a select field to an other table
-									$reference .= getReference( $tableNrSelectFields["$refField"], 'id', stripslashes( $sRow["$refField"])).$refDelim;
-								else
-									$reference .= stripslashes( $sRow["$refField"]).$refDelim;
+									if( isset( $tableNrSelectFields["$refField"]))					//* if this is a select field to an other table
+										$reference .= getReference( $tableNrSelectFields["$refField"], 'id', stripslashes( $sRow["$refField"])).$refDelim;
+									else
+										$reference .= stripslashes( $sRow["$refField"]).$refDelim;
+								}
+
+								if( $cfg->table[$fieldTableNr]['referenceAddTableRef'])
+								{
+									echoDebug("referenceAddTableRef has 3 parameters ({$sRow['taxon_id']}): call getReference( (int){$refPar[0]}, {$refPar[1]}, $refID={$sRow[$refID]})");
+
+									$reference .= getReference( (int)$refPar[0], $refPar[1], $sRow[$refID]);
+								}
+
+								$array[$sRow['id']]= trim( $reference, $refDelim);
+								$reference= '';
 							}
-
-							if( $cfg->table[$fieldTableNr]['referenceAddTableRef'])
-							{
-								echoDebug("referenceAddTableRef has 3 parameters ({$sRow['taxon_id']}): call getReference( (int){$refPar[0]}, {$refPar[1]}, $refID={$sRow[$refID]})");
-
-								$reference .= getReference( (int)$refPar[0], $refPar[1], $sRow[$refID]);
-							}
-
-							$array[$sRow['id']]= trim( $reference, $refDelim);
-							$reference= '';
 						}
 					}
 				}
@@ -297,13 +333,13 @@ function writeEditForm( $id, $row)
 							<td>";
 				}
 				else if( $field['spaces'])
-					echo str_replace( ' ', '&nbsp;', $field['spaces']);
+					echo $adjust;
 
 				//** FIELD NAME
-				if( isset( $field['tableNr']) && !$cfg['blockLinks'])
-					echo "<a target='_blank' href='?dBase=$dbase&amp;tableNr=$fieldTableNr&amp;action=edit&amp;id=$fieldValue'>$showFieldNameAs</a>";
+				if( isset( $field['tableNr']) && $fieldValue && !$cfg['blockLinks'] && $action!='advanced')
+					echo "<a target='_blank' href='?dBase=$dbase&amp;tableNr=$fieldTableNr&amp;action=edit&amp;id=$fieldValue'>$showFieldNameAs</a>$sortRadio";
 				else
-					echo $showFieldNameAs;
+					echo "$showFieldNameAs$sortRadio";
 
 				if( $combine == 'START' || $combine == 'NONE')	//* close left column and open right column
 					echo '</td>
@@ -317,7 +353,7 @@ function writeEditForm( $id, $row)
 						<input type='hidden' name='$fieldName' value='$fieldValue'>"; //* add hidden for copy function
 				}
 				else
-					showSelectionField( $array, $fieldName, $fieldValue, $field['byValue'], $field['onchange'] );
+					showSelectionField( $array, $fieldName, $fieldValue, $field['byValue'], $field['onchange'], $field['width'] );
 
 				echo "&nbsp;$fieldExplain $fieldAddLink";
 
@@ -339,11 +375,11 @@ function writeEditForm( $id, $row)
 
 				if( $fieldName  == 'autoIndex')
 					echo "
-						<tr><td>$showFieldNameAs</td><td><b>$fieldValue</b></td></tr>";
+						<tr><td>$showFieldNameAs$sortRadio</td><td><b>$fieldValue</b></td></tr>";
 				else if( $fieldName == 'Changed' || $fieldName == 'Created')
 					echo "
 						<tr>
-							<td>$showFieldNameAs</td>
+							<td>$showFieldNameAs$sortRadio</td>
 							<td>$fieldValue</td>
 						</tr>";
 				else if( $fieldName  != 'id')
@@ -358,38 +394,41 @@ function writeEditForm( $id, $row)
 							<td>';
 					}
 					else if( $field['spaces'])
-						echo str_replace( ' ', '&nbsp;', $field['spaces']);
+						echo $adjust;
 
 					if( $fieldName == 'DOI' && $row[ "$fieldName" ] != '' && !$field['noEdit'])
 					{
 
 						if( substr( $fieldValue, 0, 18) == 'http://dx.doi.org/')
-							echo '<a target="_blank" href="'.$fieldValue.'"><b>'.$showFieldNameAs.'</b></a>&nbsp;';
+							echo "<a target='_blank' href='$fieldValue'><b>$showFieldNameAs$sortRadio</b></a>&nbsp;";
 						else
-							echo '<a target="_blank" href="http://dx.doi.org/'.$fieldValue.'"><b>'.$showFieldNameAs.'</b></a>&nbsp;';
+							echo "<a target='_blank' href='http://dx.doi.org/$fieldValue'><b>$showFieldNameAs$sortRadio</b></a>&nbsp;";
 					}
 					else if( $fieldName == 'url' && $row[ "$fieldName" ] != '' && !$field['noEdit'])
 					{
 						$relativePath= $cfg['imageRoot'].$row[ "path" ].$field['relativePath'];
 
 						if( substr( $relativePath.$fieldValue, 0, 4) == 'http' || file_exists( $relativePath.$fieldValue))
-							echo '<a target="_blank" href="'.$relativePath.$fieldValue.'"><b>'.$showFieldNameAs.'</b></a>&nbsp;';
+							echo "<a target='_blank' href='$relativePath$fieldValue'><b>$showFieldNameAs$sortRadio</b></a>&nbsp;";
 						else
-							echo "<font color='red'><b>$showFieldNameAs</b></font>&nbsp;";
+						{
+							echo "<font color='red'><b>$showFieldNameAs</b></font>$sortRadio&nbsp;";
+						}
 					}
 					else if( strpos( $row[ "$fieldName" ], '@') )
-						echo '<a href="mailto:'.$row["$fieldName"].'"><b>'.$showFieldNameAs.'</b></a>&nbsp;';
-					else if( $fieldTableNr)
-						echo "<a target='_blank' href='?dBase=$dbase&amp;tableNr=$fieldTableNr&amp;action=edit&amp;id=$fieldValue'>$showFieldNameAs</a>";
+						echo "<a href='mailto:{$row["$fieldName"]}'><b>$showFieldNameAs</b></a>$sortRadio&nbsp;";
+					else if( isset( $field['tableNr']))
+//					else if( isset( $fieldTableNr))
+						echo "<a target='_blank' href='?dBase=$dbase&amp;tableNr=$fieldTableNr&amp;action=edit&amp;id=$fieldValue'>$showFieldNameAs</a>$sortRadio";
 					else if( isset( $field['referenceTable']) && !$cfg['blockLinks'])
-						echo "<a target='_blank' href='?dBase=$dbase&amp;tableNr={$field['referenceTable']}&amp;action=edit&amp;id=$fieldValue'>$showFieldNameAs</a>";
+						echo "<a target='_blank' href='?dBase=$dbase&amp;tableNr={$field['referenceTable']}&amp;action=edit&amp;id=$fieldValue'>$showFieldNameAs</a>$sortRadio";
 					else
-						echo $showFieldNameAs;
+						echo $showFieldNameAs.$sortRadio;
 
 					if( $combine == 'START' || $combine == 'NONE')	//* close left column and open right column
 						echo '</td>
 							<td>';
-					else if( $showFieldNameAs != '')
+					else if( $showFieldNameAs.$sortRadio != '')
 						echo ': ';
 
 					//* if the field is not editable
@@ -437,8 +476,6 @@ function writeEditForm( $id, $row)
 								<img src='$imageRoot".$row[ "$fieldName" ]."' height='$imageHeight' alt='picture should be here'></a>
 							</td>
 						</tr>";
-
-//								<img test='hallo' src='index1showImage.php?db={$cfg['name']}&amp;table=$tableName&amp;id=$id&amp;width={$load['width']}'>
 				}
 			}
 		}
@@ -497,6 +534,59 @@ function writeEditForm( $id, $row)
 	';
 }	//* end writeEditForm()
 
+// ************************************ //
+// **** Start function definitions **** //
+// ************************************ //
+
+function checksum( $str)
+{
+//	echo "function checksum ($str) => ";
+	$array = str_split( $str);
+	$crc= 0;
+
+	foreach( $array as $char)
+		$crc+= ord( $char);
+
+//	echo chr(($crc%25)+65)."<br>\n";
+	return chr(($crc%25)+65);
+}
+
+function getEllementByName( $node, $name)
+{
+	foreach( $node as $ellement)
+	{
+		if( trim($ellement['name']) == $name)
+			return $ellement;
+	}
+
+	die( "Error, no list with name:'$name' found");
+}
+
+function getDbItem( $cfg, $elementName)
+{
+	$i=1;
+	$array= array();
+	$ellement= FALSE;
+
+	if( $cfg->lists)
+	{
+		$element= getEllementByName( $cfg->lists->list, $elementName);
+		$cnt= 1;
+
+		while( $element["_$cnt"])
+		{
+			$array[$cnt]= $element["_$cnt"];
+			$cnt++;
+		}
+	}
+	else
+
+		foreach( $cfg->$elementName as $element)
+			$array[$i++]= $element['name'];
+
+	return( $array);
+}
+
 function correctString( $value)
 {
 	if( isset( $_GET['toLower']))
@@ -529,16 +619,17 @@ function correctString( $value)
 		die( "<p><font color='red'>correctString: Error, unknown or no correction given [toLower|trim|upperFirst|replaceCR]</font></p>");
 }
 
-function showSelectionField( $hash, $fieldName, $selected, $byValue, $onchange=FALSE)
+function showSelectionField( $hash, $fieldName, $selected, $byValue, $onchange=FALSE, $width=FALSE)
 {
 	echoDebug( "showSelectionField for '$fieldName' (selected:'$selected') byValue($byValue)");
 	$onchange= $onchange == 'submit' ? "onchange='this.form.submit()'" : '';
 	$selecFlg= $selected ? "SELECTED" : '';
 	$nullValue= $byValue ? '': 0;
+	$style= $width ? "style='width: $width;'" : '';
 
 	echo "
-			<select NAME='$fieldName' $onchange>
-				<option VALUE='$nullValue' $selecFlg>-select-";
+			<select $style NAME='$fieldName' $onchange>
+				<option VALUE='$nullValue' $selecFlg>-select-</option>";
 
 	foreach($hash as $key => $value)
 	{
@@ -548,19 +639,19 @@ function showSelectionField( $hash, $fieldName, $selected, $byValue, $onchange=F
 
 			if( $selected == $value )
 				echo "
-					<option VALUE='$value' SELECTED>$value";
+					<option VALUE='$value' SELECTED>$value</option>";
 			else
 				echo "
-					<option VALUE='$value'>$value";
+					<option VALUE='$value'>$value</option>";
 		}
 		else
 		{
 			if( $selected == $key )
 				echo "
-					<option VALUE='$key' SELECTED>$value";
+					<option VALUE='$key' SELECTED>$value</option>";
 			else
 				echo "
-					<option VALUE='$key'>$value";
+					<option VALUE='$key'>$value</option>";
 		}
 	}
 
@@ -627,7 +718,7 @@ function showButtons( $tableNr, $row)
 
 	foreach( $cfg->table[$tableNr]->function as $function)
 	{
-		if( $function['location'] == 'list')
+		if( $function['location'])
 			continue;
 
 		$url= $function['url'];
@@ -636,8 +727,17 @@ function showButtons( $tableNr, $row)
 
 		foreach( $fieldNames2replace as $fieldName)
 		{
+			$val= $function['convert'] == "strtok." ? strtok( $row[$fieldName], '.') : $row[$fieldName];
+
 			if( isset( $row[$fieldName]))
-				$url= str_replace( "@$fieldName", $row[$fieldName], $url);
+				$url= str_replace( "@$fieldName", $val, $url);
+		}
+
+		if( $function['encryptedLink'] && $pos= strpos( $url, '?'))
+		{
+			$args= substr( $url, $pos+1);
+			$crc = checksum( base64_encode( $args));
+			$url = substr( $url, 0, $pos+1).$crc.base64_encode( $args);
 		}
 
 		if( strpos( ' '.$url, 'http://') )
@@ -652,7 +752,7 @@ function showButtons( $tableNr, $row)
 				if( $argument == 'start')
 					$arguments .= "&amp;start=$start";
 				else if( $argument == 'sort')
-					$arguments .= "&amp;sort=".getRequestIsset('sort');
+					$arguments .= "&amp;sort="._REQUEST('sort');
 			}
 
 			echo " <a $target href='$url$arguments'>{$function['name']}</a>";
@@ -660,5 +760,6 @@ function showButtons( $tableNr, $row)
 	}
 
 }
+
 
 ?>

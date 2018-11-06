@@ -1,0 +1,296 @@
+/* ******************  fonts etc  ************** */
+body	
+{
+	background-image:url('../Brom-L/images/grid_noise.png'); 
+	font: 10pt verdana, arial;
+}
+
+h {
+	font: bold 9pt verdana, arial;
+	color: green;
+}
+
+h1 {
+	font: bold 14pt verdana, arial;
+	color: green;
+}
+
+h2	{
+	font: bold 11pt verdana, arial;
+	color: green;
+	text-align: left;
+	}
+	
+.fakecaps
+{
+	font-size: smaller;
+	text-transform: uppercase;
+}
+
+.truecaps{ font-variant: small-caps}
+
+a:link, a:visited{
+	color: green;
+	text-decoration: none;	
+}
+
+a img {border: none; }
+
+a:hover, a:active{
+	color: red;
+/	text-decoration: underline;	
+}
+
+p { font: 10pt verdana, arial;}
+
+p.weak { color: #808080; }
+p.error { color: red; }
+
+ 
+#bodybackground
+{
+	z-index: 0;
+	position: absolute;
+	top: 0px; 
+	left: 0px; 
+	width: 845px;; 
+	height: 683px; 
+	overflow:hidden;
+}
+
+#container 
+{
+	position: relative;
+	border: 1px #66CCCC solid;
+	border-collapse: collapse;
+	padding:10px;
+	width: 1200px;
+	height: 750px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu
+{
+	position: absolute;
+    width: 200px;
+}
+
+#content
+{
+	position: absolute;
+	left: 200px; 
+	background-color: white;
+}
+
+#herbariumLabelContainer 
+{
+	position: relative;
+//	border: 2px gray solid;
+ 	width: 100%;
+ 	height:374px;
+//	background-color:gray;
+ 	color:#fff;
+}
+
+#herbariumLabelLeft 
+{
+	position: absolute;
+	left: 0px;
+ 	width:340px;
+ 	height:370px;
+	padding:10px;
+	font: 9pt verdana, arial;
+// 	background-color:yellow;
+ 	color:black;
+}
+
+#herbariumLabelRight 
+{
+	position: absolute;
+	right: 0px;
+	width:340px;
+ 	height:370px;
+	padding:10px;
+	font: 9pt verdana, arial;
+// 	background-color:green;
+ 	color:black;
+	float:right;
+}
+
+#annotation 
+{
+	position:static;
+	float:left;
+	width:360px;
+ 	height:120px;
+	padding:10px;
+	font: 9pt verdana, arial;
+ 	color:black;
+}
+
+h1.label
+{
+	margin:0 0 0 0;
+	font: bold 14pt verdana, arial;
+	text-align: center;
+	color: black;
+}
+
+h2.label
+{
+	margin:0 0 0 0;
+	font: bold 12pt verdana, arial;
+	text-align: center;
+	color: black;
+}
+
+table.pr 
+{ 
+	border-collapse: collapse; 
+	border-style: none; 
+	border: solid 2px black; 
+}
+
+td.pr    
+{ 
+	border: solid 1px black; 
+	padding: 2px;
+	font-size: 11px;
+}
+
+th.pr  
+{ 
+	background-color: white;
+	height: 30px;
+	border: solid 1px black; 
+	text-align: left;
+	vertical-align: top;
+	padding: 2px;
+	font-size: 11px;
+}
+
+table.list
+{ 
+	background-color: #fafafa;
+	border: 2px #66CCCC solid;
+	border-collapse: collapse;
+	CELLSPACING="10";
+	font-family:arial, helvetica;
+}
+
+
+table.edit
+{ 
+	background-color: #E5E5E5;
+	border-collapse: collapse;
+	border: 2px #66CCCC solid;
+	border-spacing: 0px;
+	vertical-align: top;
+	font-family:arial, helvetica;
+	font-size:10pt;
+}
+
+TEXTAREA, INPUT 
+{
+	font-family: arial, helvetica;
+	font-size: 12px;
+}
+
+th
+{ 
+	height: 30px;
+	background-color: #66CCCC;
+	border: 0px #000000 solid;
+	text-align: left;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 12px;
+	color: #404040; 
+}
+
+td
+{ 
+	height: 20px;
+	border: 0px #000000 solid;
+	font-family: Verdana;
+	font-size: 12px;
+	color: #404040; 
+	vertical-align: top;
+}
+
+td.bottom {vertical-align: bottom;}
+
+tr.odd:hover, tr.even:hover { background: #CCFFCC;}
+
+tr.odd
+{ 
+	height: 20px;
+	background-color: #E5E5E5;
+	border: 0px #000000 solid;
+	font-family: Verdana;
+	font-size: 12px;
+	color: #404040; 
+	vertical-align: top;
+	cursor: pointer;
+/*	white-space: nowrap;	*/
+}
+
+tr.even
+{ 
+	height: 20px;
+	background-color: #EEEEEE;
+	border: 0px #000000 solid;
+	font-family: Verdana;
+	font-size: 12px;
+	color: #404040; 
+	vertical-align: top;
+	cursor: pointer;
+/*	white-space: nowrap;	*/
+}
+
+/*  	hovered table lines		*/
+.odd:hover,
+.even:hover,
+.hover {
+    background: #CCFFCC;
+    color: #000000;
+}
+
+// ** to hide overflow in a table cel 	** //
+#cell {
+    	border:0px solid #000;
+/*	width:200px;*/
+/*	height:36px;*/
+ }
+
+#cell div { 
+	overflow:hidden;
+}
+
+#cell pre {
+	font-family: Verdana;
+	font-size: 12px;
+	color: #404040; 
+	vertical-align: top;
+     	margin:4px;
+ }
+
+
+span.desc_header 
+{
+	font-style: italic;
+/*	font-variant: small-caps;*/
+	text-transform: uppercase; 
+	font-weight: 900;
+	color: #3c3533;
+}
+
+span.desc_subheader 
+{
+	font-style: italic;
+	font-weight: 900;
+	font-size: 100%;
+	color: #3c3533;
+}	

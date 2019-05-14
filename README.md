@@ -12,13 +12,15 @@ It can be used on a Linux Server or stand alone on a PC/MAC
 - a PC need WAMP, a package with Apache2, PHP5 and MySQL running on Windows
 
 The Database program works with XML configuration files (.XML) and is transparent, which means, it basically knows nothing about the Database and Table structure.
+Given a configuration, the software can initialize a database, or given a database, you should be able to write the corresponding configuration.
 
 Most functionality is build into a special include file and it features:
 - Special task functions, activated from the menu
 - Field functions
 - Reports
 
-The Database created is just a start and can be opened by: index1.php?create
+The Database created is just a start and can be opened by: ``index1.php?create``
+
 It is a nearly empty database for a start.
 
 Instructions

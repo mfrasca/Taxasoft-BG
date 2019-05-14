@@ -27,7 +27,12 @@ The Database created is just a start and can be opened by: ``index1.php?create``
 
 It is a nearly empty database for a start.
 
-Instructions
+Installation instructions depend on whether you have already a web server on
+your machine.  If not, and you're not interested in having a web server for
+any other reason than taxasoft-bg, that's the easiest, and simply follow the
+following:
+
+Instructions for dedicated Apache
 
 - install Ampps on Mac, LAMP for Linux or XAMP for Windows (which includes
   Apache2 webserver and MySQL server or a light version)
@@ -45,6 +50,39 @@ Instructions
 - start the the program localhost/path/index1.php?create in your browser, to
   create the database and tables and load ITF, WGS, Family and Genus data
   (this can take some minutes)
+
+On the other hand, if you already have a web server, or plan to have a web
+server doing anything else than serve Taxasoft-BG, you probably know a bit of
+what we're talking about here above, so the task is more complex, but the
+instructions may make some assumptions on what you know.
+
+More detailed instructions, for unix (OSX|Linux)
+
+- decide the location for your virtual host.  for ease of writing, let's
+  assume ``/var/www/taxasoft/``;
+- locate your apache configuration directory.  for ease of writing, let's
+  assume it's ``/etc/apache2``;
+- copy the complete checkout to your new virtual host files location;
+- create two extra empty directories ``log`` and ``img``;
+- configure the new virtual host;
+  - move the ``010-taxasoft.conf`` file to ``/etc/apache2/sites-available``;
+  - make a symlink to it from ``/etc/apache/site-enabled``;
+  - add the ``Listen 8742`` directive in port.conf, unless you changed the
+    port in the site configuration file;
+  - reload the new configuration: ``sudo /etc/init.d/apache2 reload``
+  - make sure your server serves php4;
+- did you enable your new virtual host?
+- double check file permissions, they must match your apache user;
+  - check your apache user: ``ps aux | egrep '(apache|httpd)'``;
+  - change permissions accordingly: ``sudo chown -R www-data.adm /var/www/taxasoft/``;
+  - I assume you are in the ``adm`` group on your Unix system;
+- configure your database user in ``guest.pass.php``;
+  - this file is not included in the distribution;
+- create the corresponding database and database user, with whatever rights you want;
+  - ``CREATE DATABASE bg_database CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;``
+  - ``CREATE USER 'guest'@'localhost' IDENTIFIED BY 'password';``
+  - ``GRANT ALL PRIVILEGES ON bg_database . * TO 'guest'@'localhost';``
+- direct your browser to the page http://localhost:8742/index1.php?create
 
 Notes:
 

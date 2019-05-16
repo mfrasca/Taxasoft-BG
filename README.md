@@ -18,7 +18,7 @@ Table structure.
 Given a configuration, the software can initialize a database, or given a
 database, you should be able to write the corresponding configuration.
 
-Most functionality is build into a special include file and it features:
+Most functionality is built into a special include file and it features:
 - Special task functions, activated from the menu
 - Field functions
 - Reports
@@ -76,8 +76,9 @@ More detailed instructions, for unix (OSX|Linux)
   - check your apache user: ``ps aux | egrep '(apache|httpd)'``;
   - change permissions accordingly: ``sudo chown -R www-data.adm /var/www/taxasoft/``;
   - I assume you are in the ``adm`` group on your Unix system;
+  - give yourself permissions to edit: ``sudo chmod -R g+w /var/www/taxasoft/``;
 - configure your database user in ``guest.pass.php``;
-  - this file is not included in the distribution;
+  - this file is not included in the distribution, check further in this text;
 - create the corresponding database and database user, with whatever rights you want;
   - ``CREATE DATABASE bg_database CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;``
   - ``CREATE USER 'guest'@'localhost' IDENTIFIED BY 'password';``
@@ -91,10 +92,10 @@ Genera.xml includes
 - Family names
 - Genara names and authors
 
-Content of guest.pass.php (with your credentials for the database):
+Content of guest.pass.php (with your credentials for the database)::
 
-<?php
-$cfgUser = "database_user";
-$cfgPass = "password";
-$cfgHost = "localhost";		//* normally "localhost" depending on your ISP
-?>
+    <?php
+    $cfgUser = "database_user";
+    $cfgPass = "password";
+    $cfgHost = "localhost";		//* normally "localhost" depending on your ISP
+    ?>
